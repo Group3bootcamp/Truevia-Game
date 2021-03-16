@@ -1,0 +1,33 @@
+{
+  "name": "assignment2repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest --colors",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Group3bootcamp/Assignment2Repo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Group3bootcamp/Assignment2Repo/issues"
+  },
+  "homepage": "https://github.com/Group3bootcamp/Assignment2Repo#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "nodemailer": "^6.5.0",
+    "sequelize": "^6.5.1"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
