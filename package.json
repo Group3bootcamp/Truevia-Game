@@ -26,6 +26,7 @@
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
     "nodemailer": "^6.5.0",
+    "opentdb-api": "^1.0.0",
     "sequelize": "^6.5.1"
   },
   "devDependencies": {
