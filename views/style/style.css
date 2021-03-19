@@ -7,6 +7,11 @@
     --primary: 
 }
 
+body {
+    background-image: url(../images/1963258.png)
+}
+
+
 header {
     display:flex;
     justify-content:space-between;
