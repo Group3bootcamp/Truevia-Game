@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Truevia</title>
     <link rel="stylesheet" href="./style/style.css" />
-    <link rel="stylesheet" href="./style/index.css" />
+    <link rel="stylesheet" href="./style/homepage.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 
@@ -22,7 +22,31 @@
 
     </header>
     <main>
-
+        <div class="main-container" id="main-container">
+            <div class="logo-banner d-flex justify-content-between jumbotron jumbotron-fluid " id="logo-banner">
+                <div class="main-logo " id="main-logo">
+                    <img src="./images/2021-03-18 (2).png" alt="logo" />
+                    <h1> Truevia</h1>
+                    <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero iusto sequi temporibus dolor velit molestiae est doloremque iure aliquam magnam expedita eos, illo commodi dicta amet. Iure adipisci quia fugiat. lore</h4>
+                    <button type="button" class="btn btn-success">Start New Game</button>
+                </div>
+            </div>
+            <div class="score-display" id="score-display">
+                <div class="top-scores" id="top-scores">
+                    <h2>Top Scores</h2>
+                </div>
+                <div class="score-card" id="score-card">
+                    <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                          <h1 class="display-4">Username Display</h1>
+                          <p class="lead">game/category picked </p>
+                          <p class="score">score display </p>
+                          <p class="time-remaining"> possibly add time remaining as a score criteria? </p>
+                        </div>
+                      </div>
+                </div>
+            </div>    
+        </div>
 
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
