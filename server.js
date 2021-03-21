@@ -70,7 +70,7 @@ var sessionChecker = (req, res, next) => {
   }
 };
 
-// route for home-page to login page
+// if they have cookie data and are already a user login
 app.get("/", sessionChecker, (req, res) => {
   res.redirect("/login");
 });
@@ -96,23 +96,26 @@ app
       });
   });
 
-//check to see if this is a valid login by query the database and see if they exist
+  // route for login page
 app
-  .route("/login")
-  .get((req, res) => {
-    res.render("login", hbsContent);
+.route("/login")
+.get((req, res) => {
+  res.render("login", hbsContent);
+})
+.post((req, res) => {
+  var username = req.body.username,
+  var password = req.body.password;
+
+  User.findOne({where: {username: username}}).then(function(user){
+      if (!user) {
+          res.redirect("/login");
+      } else if (!user.validPassword(password)){
+          res.redirect("/login");
+      } else {
+          req.session.user = user.dataValues;
+        res.redirect("/quizMenu")}
   })
-  .post((req, res) => {
-    User.create({
-      username: req.body.username,
-      password: req.body.password,
-    })
-      .then((user) => {
-        req.session.user = user.dataValues;
-        res.redirect("/dashboard");
-      })
-      //if there is error then redirect them to signup page
-      .catch((error) => {
-        res.redirect("/signup");
-      });
-  });
+  
+});
+
+
