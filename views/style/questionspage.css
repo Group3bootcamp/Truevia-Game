@@ -1,0 +1,77 @@
+
+
+/* GAME PAGE STYLING  */
+
+/* PROGRESS BAR ON TOP OF GAME  */
+#hud {
+    display: flex;
+    flex-direction: row;
+   align-content: space-between;
+  }
+  
+  #hud-item{
+    display: flex;
+    align-content: row;
+  
+  }
+  .hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .hud-main-text {
+    text-align: center;
+  }
+  
+  
+  .hud-prefix {
+    
+  }
+  /* PROGRESS BAR ON TOP OF GAME END */
+  
+  
+  /* BOX THE QUESTION RESIDES IN  */
+  
+  .choice-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: white;
+  }
+    
+  .choice-container:hover {
+      cursor: pointer;
+      box-shadow: 0 0.4rem 1.4rem 0 rgba(94, 182, 54, 0.692);
+      transform: translateY(-0.1rem);
+      transition: transform 150ms;
+    }
+    /* BOX THE QUESTION RESIDES IN END */
+  
+  
+    /* LETTER BESIDE QUESTION */
+  .choice-prefix {
+      padding: 1.5rem 2.5rem;
+      background-color: #56a5eb;
+      color: white;
+    }
+    /* LETTER BESIDE QUESTION END */
+  
+  
+  .choice-text {
+      padding: 1.5rem;
+      width: 100%;
+    }
+    
+  /* BACKGROUND COLORS BASED ON ANSWER SELECTION */
+  .correct {
+    background-color: green;
+  }
+  
+  .incorrect {
+    background-color: red;
+  }
+  /* BACKGROUND COLORS BASED ON ANSWER SELECTION END */
+    /* GAME PAGE STYLING END */
