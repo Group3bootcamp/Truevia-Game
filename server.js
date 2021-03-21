@@ -98,7 +98,7 @@ app
       });
   });
 
-  // route for login page
+  // Route for login page
 app
 .route("/login")
 .get((req, res) => {
@@ -131,6 +131,26 @@ app.get("/quizMenu", (req, res) => {
         res.redirect("/login");
     }
 })
+
+// Route to logout 
+app.get("/logout", (req, res) =>{
+    if (req.session.user && req.cookies.user_sid) {
+        hbsContent.logginin = false;
+        hbsContent.title = "You are logged out!";
+        res.clearCookie("user_sid");
+        res.redirect("/")
+    } else {
+        res.redirect("/login");
+    }
+});
+
+// route for handling errors
+
+app.use(function(req, res, next){
+    res.status(404).send("That page is unavailable")
+});
+
+app.listen(app.get("port", () => console.log("app started")));
 
 
 
