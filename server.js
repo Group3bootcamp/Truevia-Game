@@ -43,6 +43,8 @@ app.engine(
     layoutsDir: __dirname + "/view/layout",
   })
 );
+
+
 app.set("view engine", "hbs");
 
 // if they have cookie data and no current session data, clear cookie data
@@ -113,9 +115,23 @@ app
           res.redirect("/login");
       } else {
           req.session.user = user.dataValues;
-        res.redirect("/quizMenu")}
+        res.redirect("/quizMenu")
+    }
   })
-  
 });
+
+//Route to go to quiz menu page
+app.get("/quizMenu", (req, res) => {
+    if (req.session.user && req.cookies.user_sid) {
+        hbsContent.logginin = true;
+        hbsContent.usersName = req.session.user.username;
+        hbsContent.title= "You are loggin in";
+        res.render("index", hbsContent);
+    } else {
+        res.redirect("/login");
+    }
+})
+
+
 
 
