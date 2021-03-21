@@ -1,5 +1,7 @@
 const router = require('express').Router();
+
 const { User, Score, Comment} = require('../../models');
+
 
 
 
@@ -14,6 +16,7 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
     });
 });
+
 
 // Get user by Id
 router.get('/:id', (req, res) => {
@@ -50,7 +53,6 @@ router.get('/:id', (req, res) => {
     });
 });
 
-
 // Post route
 router.post('/', (req, res) => {
     User.create({
@@ -71,6 +73,7 @@ router.post('/', (req, res) => {
         res.status(500).json(err);
     });
 });
+
 
 //Update Route
 router.put('/:id', (req, res) => {
