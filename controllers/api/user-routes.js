@@ -3,8 +3,6 @@ const router = require('express').Router();
 const { User, Score, Comment} = require('../../models');
 
 
-
-
 // Get all Users
 router.get('/', (req, res) => {
     User.findAll({
