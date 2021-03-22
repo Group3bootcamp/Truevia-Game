@@ -3,21 +3,21 @@ let questionCount = localStorage.getItem("questionCount");
 let correctCount = localStorage.getItem("correctCount");
 let timer = 10;
 
-if (!questionCount)
+if (!questionCount || questionCount===0)
 {
-    questionCount=1;
+    questionCount = 0;
+    correctCount = 0;
 }
 
-if (!correctCount)
-{
-    correctCount=0;
-}
+questionCount++;
+localStorage.setItem("questionCount", questionCount);
 
 if(questionCount>10)
 {
+    questionCount = 0;
+localStorage.setItem("questionCount", questionCount);
     document.location.replace('/game-end');
 }
-
 
 document.getElementById('questionCounter').textContent = questionCount;
 document.getElementById('score').textContent = correctCount;
@@ -33,24 +33,17 @@ function checkAnswer(event)
         correctCount++;
     }
 
-    questionCount++;
-
-    localStorage.setItem("questionCount", questionCount);
     localStorage.setItem("correctCount", correctCount);
     document.location.replace('/questionpage');
 }
-
 
 setInterval(function(){
   timer--;
   document.getElementById('countdown').textContent = timer;
   if (timer === 0) {
-    questionCount++;
-    localStorage.setItem("questionCount", questionCount);
     document.location.replace('/questionpage');
   }
 }, 1000);
-
 
 document.getElementById("answer-1").addEventListener('click',checkAnswer);
 document.getElementById("answer-2").addEventListener('click',checkAnswer);
