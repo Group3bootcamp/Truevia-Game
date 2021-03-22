@@ -1,4 +1,5 @@
 const User = require('./User');
+
 const Score = require('./Score');
 const Comment = require('./Comment');
 
@@ -32,3 +33,4 @@ Score.belongsTo(User, {
 
 
 module.exports = { User, Score, Comment };
+

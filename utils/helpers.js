@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 require('dotenv').config();
-const opentdb = require('opentdb-api');
+
 
 module.exports = 
 {
@@ -37,26 +37,6 @@ module.exports =
             else{
                 console.log('Email sent!!!!!', data.response);
             }
-        });
-    },
-    getQuestion:() =>
-    {
-        opentdb.getToken().then(newToken => {
- 
-            var options = {
-                amount: 1,
-                category: 'science',
-                difficulty: 'easy',
-                type: 'multiple',
-                token: newToken
-            };
-           
-            opentdb.getTrivia(options)
-            .then(uniqueTrivia => 
-            {
-                console.log(uniqueTrivia);
-                return uniqueTrivia;
-            });
         });
     }
 };
