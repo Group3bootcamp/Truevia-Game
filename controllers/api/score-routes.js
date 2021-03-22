@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Score, User, Comment } = require('../../models');
-
+const withAuth = require('../../utils/auth');
 
 // get all scores
 router.get('/', (req, res) => {
@@ -85,7 +85,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.put('/:id', withAuth, (req, res) => {
+router.put('/:id', (req, res) => {
     Score.update(
     {
         score_amount: req.body.score_amount
