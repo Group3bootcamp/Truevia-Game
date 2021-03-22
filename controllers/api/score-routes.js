@@ -85,7 +85,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.put('/:id', withAuth, (req, res) => {
+router.put('/:id', (req, res) => {
     Score.update(
     {
         score_amount: req.body.score_amount
