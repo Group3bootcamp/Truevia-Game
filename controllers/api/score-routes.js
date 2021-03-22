@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Score, User, Comment } = require('../../models');
-
+const withAuth = require('../../utils/auth');
 
 // get all scores
 router.get('/', (req, res) => {
