@@ -15,18 +15,14 @@
                     <div class="jumbotron jumbotron-fluid">
                         <div class="container">
               {{#if scores.length}}
-<section>
-  <ol>
-    {{#each scores as |score|}}
-    <li>
-      Highscore: {{score.score_amount}}
-      Username: {{score.user.username}}
-      <a href="/commentpage/{{score.id}}" class="edit-link">see comments</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
+            <section>
+            <ol>
+                {{#each scores as |score|}}
+                {{> scores-list score}}
+                {{/each}}
+            </ol>
+            </section>
+            {{/if}}
                         </div>
                       </div>
                 </div>

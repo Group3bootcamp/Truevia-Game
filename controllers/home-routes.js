@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
             'score_amount',
             'created_at',
     ],
+    order: [['score_amount', 'DESC']], 
         include: [
         {
             model: Comment,
@@ -43,7 +44,7 @@ router.get('/', (req, res) => {
 
 // get single score
 router.get('/score/:id', (req, res) => {
-    Post.findOne({
+    Score.findOne({
     where: {
         id: req.params.id
     },
@@ -75,7 +76,7 @@ router.get('/score/:id', (req, res) => {
 
         const score = dbScoreData.get({ plain: true });
         // Single score? goes to comment page? I think we need a single-score.handlebars
-        res.render('comment-page', {
+        res.render('commentpage', {
             score,
             loggedIn: req.session.loggedIn
         });
