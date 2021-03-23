@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { Score, User, Comment} = require('../models');
+const withAuth = require('../utils/auth');
 
 // get all scores for dashboard
-router.get('/', (req, res) => {
+router.get('/',withAuth, (req, res) => {
     Score.findAll({
     where: {
         user_id: req.session.user_id
@@ -30,7 +31,7 @@ router.get('/', (req, res) => {
     .then(dbScoreData => {
         const scores = dbScoreData.map(score => score.get({ plain: true }));
         // Is this the correct page to render??
-        res.render('commentpage', { scores, loggedIn: true });
+        res.render('dashboard', { scores, loggedIn: true });
     })
     .catch(err => {
         console.log(err);

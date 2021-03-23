@@ -1,4 +1,5 @@
     <main>
+<<<<<<< HEAD
     <main>
 <div class="dashboard-header" id="dashboard-header">
     <h1>Dashboard</h1>
@@ -20,6 +21,25 @@
 </body>
 </html>
 
+=======
+        <div class="dashboard-header" id="dashboard-header">
+            <h1>Dashboard</h1>
+            {{#if scores.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each scores as |score|}}
+    <li>
+      Highscore: {{score.score_amount}}
+      Username: {{score.user.username}}
+      <a href="/commentpage/{{score.id}}" class="edit-link">see comments</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+        </div>
+>>>>>>> ba734b7215128cfbc9f000dc2e6f63864ce47687
     </main>
     <footer class="page-footer main-background">
         <ul class="nav nav-pills nav-fill">
