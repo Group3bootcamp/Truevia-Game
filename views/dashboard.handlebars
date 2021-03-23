@@ -1,0 +1,21 @@
+  <main>
+    <div class="main">
+      <div class="main-display-a">
+          <div class="dashboard-header">
+              <h1>Dashboard</h1>
+          </div>
+          <div class="username-display-box">
+              <h2 class="username-display">{{scores.username}}</h2>
+          </div>
+      </div>
+
+      <div class="score-display-area" id="score-display-area">
+          <h2 class="your-score">Your High Scores</h2>
+      </div>
+      <div class="score-display-card">
+          {{#each scores as |score|}}
+              {{> scores-list score}}
+          {{/each}}
+      </div>
+    </div>
+  </main>

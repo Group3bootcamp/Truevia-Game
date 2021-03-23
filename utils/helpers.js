@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 require('dotenv').config();
-const opentdb = require('opentdb-api');
+
 
 module.exports = 
 {
@@ -24,7 +24,7 @@ module.exports =
         {
             from: process.env.EMAIL,
             to: distEmail,
-            subject:'Testing and Testing',
+            subject:'Welcome to Trivia',
             text: msg
         };
       
@@ -39,25 +39,14 @@ module.exports =
             }
         });
     },
-    getQuestion:() =>
+    format_plural: (word, amount) => 
     {
-        opentdb.getToken().then(newToken => {
- 
-            var options = {
-                amount: 1,
-                category: 'science',
-                difficulty: 'easy',
-                type: 'multiple',
-                token: newToken
-            };
-           
-            opentdb.getTrivia(options)
-            .then(uniqueTrivia => 
-            {
-                console.log(uniqueTrivia);
-                return uniqueTrivia;
-            });
-        });
+        if (amount > 1) 
+        {
+            return `${word}s`;
+        }
+    
+        return word;
     }
 };
  

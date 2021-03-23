@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: rgb(251,251,204);
+    --secondary: rgb(91,203,204);
+    --tertiary: rgb(72,97,138);
+    --quaternary: rgb(223,107,164);
+    --quinary: rgb(156,188,194);
+  }
+body {
+    background-image: url(/images/1963258.png)
+}
+
+
+header {
+    width: 100%;
+
+
+}
+
+.truevia-container {
+    display:flex;
+    color: var(--secondary)
+}
+header {
+    display: flex;
+    justify-content: row;
+    background-color: var(--primary);
+}
+.header-buttons {
+    display: flex;
+    justify-content: flex-start;
+}
+.btn {
+    margin: 5px;
+    color: var(--quaternary);
+}
+main {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.card {
+    background-color: var(--primary)
+}
+
+footer {
+    background-color: var(--primary)
+}

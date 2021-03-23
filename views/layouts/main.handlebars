@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truevia</title>
+    <link rel="icon" type="image/png" href="/images/logo.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/questionspage.css" />
+</head>
+<body>
+
+    {{!-- <header>
+        <img src="/images/2021-03-18 (2).png" alt="logo" />
+        <h3>
+            <a href="/">Truevia</a>
+        </h3>
+        <nav class="header-buttons" id="header-buttons">
+            {{#if loggedIn}}
+                <a class="btn btn-primary btn-lg" href="/dashboard">dashboard</a>
+                <button id="logout" class="btn-no-style">logout</button>
+            {{else}}
+                <a class="btn btn-primary btn-lg" href="/log-in">login</a>
+            {{/if}}
+      </nav>
+    </header> --}}
+
+    <header>
+        <!-- Just an image -->
+        <div class="container">
+            <div class="truevia-container" id="truevia-container">
+                <a class="navbar-brand" href="#">
+                    <img src="/images/161644410948839710.png" alt="" width="45" height="45">
+                </a>
+                <h3>Truevia</h3>
+            </div>
+
+            <div class="header-buttons" id="header-buttons">
+                <a class="btn  btn-lg" href="/">Home</a>
+                {{#if loggedIn}}
+                    <a class="btn  btn-lg" href="/dashboard">Dashboard</a>
+                    <button id="logout" class="btn  btn-lg">logout</button>
+                {{else}}
+                    <a class="btn btn-primary btn-lg" href="/log-in">login</a>
+                {{/if}}
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Launch demo modal
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+    {{{body}}}
+
+    <footer>
+        <div class="container">
+            <div class="truevia-container" id="truevia-container">
+              <a class="navbar-brand" href="#">
+              <img src="/images/161644410948839710.png" alt="" width="45" height="45">
+            </a>
+              <h3>Truevia</h3>
+          </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    {{#if loggedIn}}
+        <script src="/javascript/logout.js"></script>
+    {{/if}}
+    </body>
+</html>

@@ -1,6 +1,8 @@
 const router = require('express').Router();
-const { User, Score, Comment} = require('../../models');
 
+const { User, Score, Comment} = require('../../models');
+const withAuth = require('../../utils/auth');
+const { sendEmail } = require('../../utils/helpers');
 
 
 // Get all Users
@@ -14,6 +16,7 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
     });
 });
+
 
 // Get user by Id
 router.get('/:id', (req, res) => {
@@ -50,7 +53,6 @@ router.get('/:id', (req, res) => {
     });
 });
 
-
 // Post route
 router.post('/', (req, res) => {
     User.create({
@@ -59,6 +61,8 @@ router.post('/', (req, res) => {
         password: req.body.password
     })
     .then(dbUserData => {
+        sendEmail(dbUserData.email,`Welcome ${dbUserData.username} to trivia game`);
+
         req.session.save(() => {
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
@@ -72,8 +76,9 @@ router.post('/', (req, res) => {
     });
 });
 
+
 //Update Route
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     User.update(req.body, {
         individualHooks: true,
         where: {
@@ -94,7 +99,7 @@ router.put('/:id', (req, res) => {
 });
 
 //Delete Route
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     User.destroy({
         where: {
             id: req.params.id
@@ -142,7 +147,7 @@ router.post('/login', (req, res) => {
 });
 
 // Logout Route 
-router.post('/logout', (req, res) => {
+router.post('/logout',withAuth, (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end();
