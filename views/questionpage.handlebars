@@ -1,0 +1,41 @@
+    <body>
+
+        <!-- PROGRESS TRACKER INFORMATION -->
+        <!-- QUIZ PROGRESS STATUS DISPLAY -->
+        <div id="hud">
+          <div id="hud-item">
+            <p class="hud-prefix" >
+                  Question {{questionNo}}
+            </p>
+            <h1 class="hud-main-text" id="questionCounter">
+                 
+            </h1>
+          </div>  
+        <!-- QUIZ PROGRESS STATUS DISPLAY END-->
+        
+        <!-- QUIZ CORRECT ANSWER DISPLAY -->
+          <div id="hud-item">
+            <p class="hud-prefix">
+                   Correct
+            </p>
+            <h1 class="hud-main-text" id="score">
+                    0
+            </h1>
+          </div>
+        <!-- QUIZ CORRECT ANSWER DISPLAY END -->
+        
+        <!-- GAME TIMER -->
+        <div id="hud-item">
+        <p class="hud-prefix">
+            Time Remaining
+        </p>
+        <h1 class="hud-main-text" id="countdown"></h1>
+        </div> 
+        </div>  
+        <!-- GAME TIMER END -->
+        <!-- PROGRESS TRACKER INFORMATION END-->
+        
+        
+{{> question this}}
+      
+        <script src="/javascript/questionspage.js"></script>

@@ -5,7 +5,7 @@ async function loginBtnHandler(event)
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value.trim();
 
-    if(username && password)
+    if(email && password)
     {
         const res= await fetch("/api/users/login",
             {
@@ -42,6 +42,13 @@ async function signupBtnHandler(event)
     const username = document.getElementById('username').value.trim();
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value.trim();
+    const password2 = document.getElementById('password2').value.trim();
+
+    if(password!==password2)
+    {
+        alert('password should match confirm password');
+        return;
+    }
 
     if(username && email && password)
     {
