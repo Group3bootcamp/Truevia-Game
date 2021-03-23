@@ -6,8 +6,8 @@
     </div>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4 user-name-highscore" id="user-name-highscore">High Sore Username Placeholder</h1>
-          <p class="score-display" id="score-dispaly">total score with time remaining placeholder</p>
+          <h1 class="display-4 user-name-highscore" id="user-name-highscore"> Score: {{score.score_amount}}</h1>
+          <p class="score-display" id="score-dispaly">{{score.user.username}} on {{format_date score.created_at}}</p>
         </div>
       </div>
 
@@ -16,24 +16,14 @@
             <h2>Comments:</h2>
         </div> 
         <div class="message-display" id="message-display">
-            <div class="card" style="width: 60rem;">
-                <div class="card-body">
-                    <div class="card-header d-flex justify-content-between" id="card-header">
-                    <h5 class="card-title">Username Placeholder</h5>
-                    <h5 class="date" id="date">Date</h5>
-                </div>
-                  <p class="card-text">User Comment Content Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam consequuntur dolore eius delectus est provident facere sed voluptatum, ratione expedita iste repudiandae illo distinctio aliquam non quae officia nisi? Omnis.</p>
-                 
-                </div>
-              </div>
-              
-              <div class="form-group">
-                <label for="exampleFormControlTextarea1">Write a message here!</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="width: 60rem;"></textarea>
-              </div>
-              <div class="submit-comment" id="submit-comment">
-                <a href="#" class="btn btn-primary">Comment</a>
-              </div>
+            {{> comments score.comments}}
+            {{#if loggedIn}}
+              <form class="form-group" id= 'comment-form'>
+                <label for="comment-text">Write a message here!</label>
+                <textarea class="form-control" id="comment-text" rows="3" style="width: 60rem;"></textarea>
+                <button type="submit"  class="btn btn-primary">Comment</button>
+              </form>
+            {{/if}}
         </div>
 
         <div class="user-comments" id="user-comments">
@@ -45,6 +35,6 @@
 
 
     </main>
-
-    <script src="/javascript/highscore.js"></script>
-
+{{#if loggedIn}}
+    <script src="/javascript/commentpage.js"></script>
+{{/if}}

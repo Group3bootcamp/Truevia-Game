@@ -44,6 +44,7 @@ router.get('/:id', (req, res) => {
         'score_amount',
         'created_at',
     ],
+    order: [['score_amount', 'DESC']],
     include: [
         {
             model: Comment,

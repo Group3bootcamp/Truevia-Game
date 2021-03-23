@@ -1,0 +1,10 @@
+{{#each this}}
+<div class="card" style="width: 60rem;">
+    <div class="card-header d-flex justify-content-between" id="card-header">
+        <h5 class="card-title"> {{user.username}} on {{format_date created_at}} </h5>
+    </div>
+    <div class="card-body">
+        <h5 class="date" id="date">{{comment_text}}</h5>
+    </div>
+</div>
+{{/each}}

@@ -12,7 +12,7 @@ router.use('/questionpage', questionRoutes);
 
 router.get('/game-end', (req, res) => 
 {    
-    res.render('game-end');
+    res.render('game-end',{loggedIn: req.session.loggedIn});
 });
 
 module.exports = router;
