@@ -14,10 +14,19 @@
                 <div class="score-card" id="score-card">
                     <div class="jumbotron jumbotron-fluid">
                         <div class="container">
-                          <h1 class="display-4">Username Display</h1>
-                          <p class="lead">game/category picked </p>
-                          <p class="score">score display </p>
-                          <p class="time-remaining"> possibly add time remaining as a score criteria? </p>
+              {{#if scores.length}}
+<section>
+  <ol>
+    {{#each scores as |score|}}
+    <li>
+      Highscore: {{score.score_amount}}
+      Username: {{score.user.username}}
+      <a href="/commentpage/{{score.id}}" class="edit-link">see comments</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
                         </div>
                       </div>
                 </div>
