@@ -38,6 +38,15 @@ module.exports =
                 console.log('Email sent!!!!!', data.response);
             }
         });
+    },
+    format_plural: (word, amount) => 
+    {
+        if (amount > 1) 
+        {
+            return `${word}s`;
+        }
+    
+        return word;
     }
 };
  

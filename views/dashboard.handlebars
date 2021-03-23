@@ -6,11 +6,7 @@
   <h2>Your Posts</h2>
   <ol>
     {{#each scores as |score|}}
-    <li>
-      Highscore: {{score.score_amount}}
-      Username: {{score.user.username}}
-      <a href="/commentpage/{{score.id}}" class="edit-link">see comments</a>
-    </li>
+      {{> scores-list score}}
     {{/each}}
   </ol>
 </section>
