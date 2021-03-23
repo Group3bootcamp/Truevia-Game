@@ -15,7 +15,7 @@ localStorage.setItem("questionCount", questionCount);
 if(questionCount>10)
 {
     questionCount = 0;
-localStorage.setItem("questionCount", questionCount);
+    localStorage.setItem("questionCount", questionCount);
     document.location.replace('/game-end');
 }
 

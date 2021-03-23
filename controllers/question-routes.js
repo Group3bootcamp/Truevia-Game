@@ -37,7 +37,8 @@ router.get('/',withAuth, (req, res) =>
                 answer2: answerArray[1],
                 answer3: answerArray[2],
                 answer4: answerArray[3],
-                correct_answer: uniqueTrivia[0].correct_answer
+                correct_answer: uniqueTrivia[0].correct_answer,
+                loggedIn: req.session.loggedIn
             };
             console.table(triviaQuestion);
             res.render('questionpage',triviaQuestion);
