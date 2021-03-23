@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
         'score_amount',
         'created_at',
     ],
+    order: [['score_amount', 'DESC']], 
     include: [
         {
             model: Comment,
@@ -73,7 +74,7 @@ router.get('/:id', (req, res) => {
 
 
 //Post Route
-router.post('/', (req, res) => {
+router.post('/',withAuth, (req, res) => {
     Score.create({
         score_amount: req.body.score_amount,
         user_id: req.session.user_id
@@ -85,7 +86,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id',withAuth ,(req, res) => {
     Score.update(
     {
         score_amount: req.body.score_amount
@@ -110,7 +111,7 @@ router.put('/:id', (req, res) => {
 });
 
 //Delete Route
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     console.log('id', req.params.id);
     Score.destroy({
     where: {
