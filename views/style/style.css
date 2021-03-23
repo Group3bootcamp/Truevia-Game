@@ -25,16 +25,29 @@ header {
     display:flex;
     color: var(--secondary)
 }
-
+header {
+    display: flex;
+    justify-content: row;
+    background-color: var(--primary);
+}
 .header-buttons {
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-start;
+}
+.btn {
+    margin: 5px;
+    color: var(--quaternary);
 }
 main {
     display: flex;
     justify-content: center;
+    
 }
 
 .card {
+    background-color: var(--primary)
+}
+
+footer {
     background-color: var(--primary)
 }

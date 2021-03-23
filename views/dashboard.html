@@ -13,7 +13,6 @@
 
     <header>
         <!-- Just an image -->
-<nav class="navbar navbar-light bg-light">
     <div class="container">
       
       <div class="truevia-container" id="truevia-container">
@@ -26,12 +25,37 @@
     </div>
 
         <div class="header-buttons" id="header-buttons">
-          <a class="btn btn-primary btn-lg" href="./homepage.html">Home</a>
-            <a class="btn btn-primary btn-lg" href="./commentpage.html">High Scores</a>
-            <a class="btn btn-primary btn-lg" >Log Out</a>
+          <a class="btn  btn-lg" href="./homepage.html">Home</a>
+            <a class="btn  btn-lg" href="./commentpage.html">High Scores</a>
+            <a class="btn  btn-lg" >Log Out</a>
+
+            <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
         </div>
     </div>
-    </nav>
     </header>
 
     <main>
@@ -53,13 +77,13 @@
 
             <div class="card-body">
               <div class="quiz-name" id="quiz-name">
-                  <p>quiz name</p>
+                  <p>quiz name placeholder text</p>
               </div>
               <div class="quiz-date" id="quiz-date">
-                  <p>date quiz was taken</p>
+                  <p>date quiz was taken placeholder text</p>
               </div>
               <div class="score-display" id="score-display">
-                  <p>score display</p>
+                  <p>score display placeholder text </p>
               </div>
             </div>
           </div>
@@ -68,10 +92,12 @@
     </main>
 
     <footer>
-        <div class="card footer-card ">
-            <div class="card card-body footer-card-body">
-              This is some text within a card body.
-            </div>
+        <div class="container">
+            <div class="truevia-container" id="truevia-container">
+              <a class="navbar-brand" href="#">
+              <img src="./images/161644410948839710.png" alt="" width="45" height="45">
+            </a>
+              <h3>Truevia</h3>
           </div>
     </footer>
 
