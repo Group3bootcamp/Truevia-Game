@@ -3,7 +3,7 @@ async function saveScore(score)
     
     localStorage.setItem("questionCount", 0);
     localStorage.setItem("correctCount", 0);
-    document.getElementById('finalScore').textContent = 'Your final score is : '+ score;
+    document.getElementById('finalScore').textContent = 'Your Score is : '+ score;
     console.log(score);
     const res= await fetch("/api/scores/",
         {

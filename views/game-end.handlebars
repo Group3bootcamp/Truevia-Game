@@ -1,5 +1,5 @@
     <main>  
-
+        {{#if loggedIn}}
         <div class="container d-flex align-items-center justify-content-center my-5" id="final-score-aSrea">
             <div class="form text-center" id="form">
                 <h1 id="finalScore"> final score shown here</h1>
@@ -11,6 +11,7 @@
                 </form>
             </div>
         </div>
+        {{/if}}
 
                     <div class="score-display w-100" id="score-display">
                 <div class="top-scores text-center mt-5 mb-3" id="top-scores">
