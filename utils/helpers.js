@@ -9,7 +9,7 @@ module.exports =
       return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(
         date).getFullYear()}`;
     },
-    sendEmail: (distEmail,msg)=>
+    sendEmail: (distEmail,sub,msg)=>
     {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
@@ -24,7 +24,7 @@ module.exports =
         {
             from: process.env.EMAIL,
             to: distEmail,
-            subject:'Welcome to Trivia',
+            subject: sub,
             text: msg
         };
       

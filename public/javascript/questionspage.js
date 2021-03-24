@@ -16,7 +16,7 @@ if(questionCount>10)
 {
     questionCount = 0;
     localStorage.setItem("questionCount", questionCount);
-    document.location.replace('/game-end');
+    document.location.replace('/game-end/'+correctCount);
 }
 
 document.getElementById('questionCounter').textContent = questionCount;
