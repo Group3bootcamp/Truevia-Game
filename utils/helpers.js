@@ -24,7 +24,7 @@ module.exports =
         {
             from: process.env.EMAIL,
             to: distEmail,
-            subject:'Welcome to Trivia',
+            subject:'Welcome to Truevia Game',
             text: msg
         };
       

@@ -61,7 +61,7 @@ router.post('/', (req, res) => {
         password: req.body.password
     })
     .then(dbUserData => {
-        sendEmail(dbUserData.email,`Welcome ${dbUserData.username} to trivia game`);
+        sendEmail(dbUserData.email,`Welcome ${dbUserData.username} to Truevia Game`);
 
         req.session.save(() => {
             req.session.user_id = dbUserData.id;
