@@ -1,33 +1,37 @@
     <main>
-        <div class="main-container" id="main-container">
-            <div class="logo-banner d-flex justify-content-between jumbotron jumbotron-fluid " id="logo-banner">
-                <div class="main-logo " id="main-logo">
+        <div class="container" id="main-container">
+            <div class="logo-banner d-flex justify-content-center jumbotron jumbotron-fluid m-3" id="logo-banner">
+                <div class="main-logo text-center" id="main-logo">
+                    <img src="/images/2021-03-18 (2).png" alt="logo" />
                     <h1> Truevia</h1>
-                    <h4> TEXT HERE FOR GAME DETAILS. 10 QUESTIONS 30 SECONDS EACH. NEXT QUESTION IF OUT OF TIME. FINAL SCORE IS COMBINATION OF CORRECT ANSWERS (AND POSSIBLY TIME REMAINING IN LATER VERSIONS) LATER VERSIONS WILL POSSIBLY SHOW CATEGORY OF CHOICE AND UPDATED FEATURES SUCH AS TEAMS/REGIONAL NIGHTLY QUIZZES, COMPETING VE OTHERS IN LEAUGE FORMAT DAILY CHALLENGES ETC....</h4>
-                    <a href="/questionpage" class="btn btn-success">Start New Game</a>
+                    <h4>TRY TO ANSWER QUESTIONS AS MUCH AS YOU CAN</h4>
+                    <h4>10 QUESTIONS 10 SECONDS EACH</h4>
+                    <h4>IF YOU ARE OUT OF TIME YOU WILL GO TO THE NEXT QUESTION</h4>
+                    <h4>FINAL SCORE IS YOUR CORRECT ANSWERS </h4>
+                    <a href="/questionpage" class="btn btn-success mt-3">Start New Game</a>
                 </div>
             </div>
-            <div class="score-display" id="score-display">
-                <div class="top-scores" id="top-scores">
-                    <h2>Top Scores</h2>
+
+            <div class="score-display w-100" id="score-display">
+                <div class="top-scores text-center mt-5 mb-3" id="top-scores">
+                    <h2>Top 3 Scores</h2>
                 </div>
                 <div class="score-card" id="score-card">
                     <div class="jumbotron jumbotron-fluid">
                         <div class="container">
-                        {{#if scores.length}}
-                            <section>
-                            <ol>
-                                {{#each scores as |score|}}
-                                    {{> scores-list score}}
-                                {{/each}}
-                            </ol>
-                            </section>
-                        {{/if}}
+                            {{#if scores.length}}
+                                <section>
+                                    <ol class="list-group list-group-numbered">
+                                        {{#each scores as |score|}}
+                                            {{> scores-list score}}
+                                        {{/each}}
+                                    </ol>
+                                </section>
+                            {{/if}}
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>    
         </div>
-
     </main>
     <script src="/javascript/homepage.js"></script>

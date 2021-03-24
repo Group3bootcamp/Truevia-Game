@@ -1,20 +1,18 @@
-
-
 /* GAME PAGE STYLING  */
 
 /* PROGRESS BAR ON TOP OF GAME  */
-#hud {
+/* #hud {
     display: flex;
     flex-direction: row;
    align-content: space-between;
-  }
+  } */
   
-  #hud-item{
+  /* #hud-item{
     display: flex;
     align-content: row;
   
-  }
-  .hud-prefix {
+  } */
+  /* .hud-prefix {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
@@ -27,13 +25,13 @@
   
   .hud-prefix {
     
-  }
+  } */
   /* PROGRESS BAR ON TOP OF GAME END */
   
   
   /* BOX THE QUESTION RESIDES IN  */
   
-  .choice-container {
+   .choice-container {
     display: flex;
     margin-bottom: 0.5rem;
     width: 100%;
@@ -47,15 +45,16 @@
       box-shadow: 0 0.4rem 1.4rem 0 rgba(94, 182, 54, 0.692);
       transform: translateY(-0.1rem);
       transition: transform 150ms;
-    }
+    } 
     /* BOX THE QUESTION RESIDES IN END */
   
   
     /* LETTER BESIDE QUESTION */
   .choice-prefix {
-      padding: 1.5rem 2.5rem;
+      padding: 2.5rem 2.5rem;
       background-color: #56a5eb;
       color: white;
+      margin: 0px;
     }
     /* LETTER BESIDE QUESTION END */
   
@@ -66,12 +65,12 @@
     }
     
   /* BACKGROUND COLORS BASED ON ANSWER SELECTION */
-  .correct {
+  /* .correct {
     background-color: green;
   }
   
   .incorrect {
     background-color: red;
-  }
+  } */
   /* BACKGROUND COLORS BASED ON ANSWER SELECTION END */
     /* GAME PAGE STYLING END */

@@ -32,7 +32,7 @@ router.get('/',withAuth, (req, res) => {
     .then(dbScoreData => {
         const scores = dbScoreData.map(score => score.get({ plain: true }));
         // Is this the correct page to render??
-        res.render('dashboard', { scores, loggedIn: true });
+        res.render('dashboard', { scores, loggedIn: true, username:req.session.username });
     })
     .catch(err => {
         console.log(err);
