@@ -70,7 +70,7 @@ router.get('/game-end/:score', (req, res) => {
     ]
     })
     .then(dbScoreData => {
-        sendEmail(dbScoreData[0].user.email,'Truevia Game last Score',`Good Job ${dbScoreData[0].user.username} Your Score is ${req.params.score}`);
+        sendEmail(req.session.email,'Truevia Game last Score',`Good Job ${req.session.username} Your Score is ${req.params.score}`);
         const scores = dbScoreData.map(score => score.get({ plain: true }));
         // This should lead to the high scores page I believe
         res.render('game-end', {
