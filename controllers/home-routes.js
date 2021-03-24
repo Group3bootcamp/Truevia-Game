@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 const { Score, User, Comment} = require('../models');
-
+const { sendEmail } = require('../utils/helpers');
 
 // get all scores for homepage
 router.get('/', (req, res) => {
@@ -33,6 +33,47 @@ router.get('/', (req, res) => {
         const scores = dbScoreData.map(score => score.get({ plain: true }));
         // This should lead to the high scores page I believe
         res.render('homepage', {
+            scores,
+            loggedIn: req.session.loggedIn
+        });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+
+// get all scores for homepage
+router.get('/game-end/:score', (req, res) => {
+    console.log('======================');
+    Score.findAll({
+        attributes: [
+            'id',
+            'score_amount',
+            'created_at'
+    ],
+    order: [['score_amount', 'DESC']], 
+        include: [
+        {
+            model: Comment,
+            attributes: ['id', 'comment_text', 'score_id', 'user_id', 'created_at'],
+            include: {
+                model: User,
+                attributes: ['username']
+            }
+        },
+        {
+            model: User,
+            attributes: ['username','email']
+        }
+    ]
+    })
+    .then(dbScoreData => {
+        sendEmail(dbScoreData[0].user.email,'Truevia Game last Score',`Good Job ${dbScoreData[0].user.username} Your Score is ${req.params.score}`);
+        const scores = dbScoreData.map(score => score.get({ plain: true }));
+        // This should lead to the high scores page I believe
+        res.render('game-end', {
             scores,
             loggedIn: req.session.loggedIn
         });
@@ -81,6 +122,7 @@ router.get('/game-end', (req, res) => {
         res.status(500).json(err);
     });
 });
+
 
 // get single score
 router.get('/score/:id', (req, res) => {
