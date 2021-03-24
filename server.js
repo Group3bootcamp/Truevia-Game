@@ -150,7 +150,7 @@ app.use(function(req, res, next){
     res.status(404).send("That page is unavailable")
 });
 
-app.listen(app.get("port", () => console.log("app started")));
+app.listen(app.get(`port`), () => console.log(`App started on port ${app.get(`port`)}`));
 
 
 
