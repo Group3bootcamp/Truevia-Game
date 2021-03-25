@@ -13,15 +13,15 @@
     <body>
         <header class="navbar navbar-expand-lg">
         <!-- Just an image -->
-            <div class="container-fluid">
-                <div class="navbar-brand" id="truevia-container">
-                    <a href="/" class="d-flex align-items-center btn btn-lg">
+            <div class="d-flex justify-content-between align-items-center flex-wrap header-nav w-100 ">
+                <div class="d-flex justify-content-center align-items-center" id="truevia-container">
+                    <h3 href="/" class="d-flex">
                         <img src="/images/161644410948839710.png" alt="" width="45" height="45">
                         <h3>Truevia</h3>
-                    </a>
+                    </h3>
                 </div>
 
-                <div class="d-flex" id="header-buttons">
+                <div class="d-flex justify-content-center flex-wrap" id="header-buttons">
                     <a class="btn  btn-lg" href="/">Home</a>
                     <a class="btn  btn-lg" href="/game-end">Highscores</a>
                     {{#if loggedIn}}
@@ -30,28 +30,6 @@
                     {{else}}
                         <a class="btn btn-lg" href="/log-in">login</a>
                     {{/if}}
-                    {{!-- <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Launch demo modal
-                    </button>
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
         </header>
@@ -59,18 +37,26 @@
         {{{body}}}  
 
         <!-- Footer -->
-        <footer class=" text-center text-lg-start d-flex justify-content-center">
+        <footer class="mt-4 py-3 text-center text-lg-start">
             <!-- Copyright -->
             {{!-- <div class="truevia-container " id="truevia-container">
 
             </div> --}}
-            <div class="text-center p-3 d-flex align-items-center">
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="/images/161644410948839710.png" alt="" width="45" height="45">
-                    <h3>Truevia</h3>
-                </a> ©2021 Copyright : 
-                <a class="text-dark" href="https://www.github.com/"> GitHub.com</a>
-            </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <div style="width: 33.33%;">
+                        <h6>©2021 Copyright : Truevia</h6>
+                    </div>
+                    <div style="width: 33.33%;">
+                        <a class="navbar-brand d-flex justify-content-center align-items-center" href="/">
+                            <img src="/images/161644410948839710.png" alt="" width="45" height="45">
+                            <h3>Truevia</h3>
+                        </a> 
+                    </div>
+                    <div style="width: 33.33%; text-align: right;">
+                        <a href="#"><h6>Back to top</h6> </a>
+                    </div>
+                </div>
             <!-- Copyright -->
         </footer>
         <!-- Footer -->
