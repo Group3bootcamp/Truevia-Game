@@ -13,7 +13,7 @@ Score.init(
         autoIncrement: true
     },
     score_amount: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false
     },
     

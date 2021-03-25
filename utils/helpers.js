@@ -15,14 +15,14 @@ module.exports =
             service: 'gmail',
             auth:
             {
-                user: process.env.EMAIL,
-                pass: process.env.PASSWORD
+                user: 'truevia.game@gmail.com',
+                pass: 'T_123456'
             }
         });
       
         let mailOption = 
         {
-            from: process.env.EMAIL,
+            from: 'truevia.game@gmail.com',
             to: distEmail,
             subject: sub,
             text: msg

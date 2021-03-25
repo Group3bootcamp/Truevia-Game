@@ -1,5 +1,5 @@
-localStorage.setItem("questionCount", 0);
-localStorage.setItem("correctCount", 0);
+localStorage.setItem("questionCount", -1);
+localStorage.setItem("correctCount", -1);
 var myModal = document.getElementById('myModal');
 var myInput = document.getElementById('myInput');
 

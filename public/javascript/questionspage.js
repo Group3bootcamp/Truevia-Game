@@ -3,7 +3,7 @@ let questionCount = localStorage.getItem("questionCount");
 let correctCount = localStorage.getItem("correctCount");
 let timer = 10;
 
-if (!questionCount || questionCount===0)
+if (!questionCount || questionCount<1)
 {
     questionCount = 0;
     correctCount = 0;

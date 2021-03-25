@@ -1,9 +1,7 @@
 async function saveScore(score) 
 {
-    
-    localStorage.setItem("questionCount", 0);
-    localStorage.setItem("correctCount", 0);
-    document.getElementById('finalScore').textContent = 'Your Score is : '+ score;
+    localStorage.setItem("questionCount", -1);
+    localStorage.setItem("correctCount", -1);
     const res= await fetch("/api/scores/",
         {
             method: "post",
@@ -20,7 +18,8 @@ async function saveScore(score)
     );
 
     if(res.ok)
-    {
+    {    
+        document.location.replace('/game-end/'+score);
     } 
     else 
     {
@@ -29,5 +28,18 @@ async function saveScore(score)
     
 }
 
+const score_display = window.location.toString().split('/')[
+    window.location.toString().split('/').length - 1
+  ];
+
 const score = localStorage.getItem("correctCount");
-saveScore(score);
+
+if (score>=0)
+{
+    saveScore(score);
+}
+
+if (parseInt(score_display) )
+{
+    document.getElementById('finalScore').textContent = 'Your Score is : '+ score_display;
+}
