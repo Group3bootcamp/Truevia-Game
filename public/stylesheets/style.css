@@ -30,7 +30,7 @@ body {
 header {
     /* display: flex; */
     /* justify-content: row; */
-    padding: 10px;
+    padding: 20px;
     background-color: var(--primary);
 }
 .header-buttons {
