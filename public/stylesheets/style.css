@@ -68,7 +68,14 @@ footer p:last-child {
     margin-bottom: 0;
   }
 
+footer a {
+    text-decoration: none;
+    color: black;
+}
 
+footer a:hover {
+    color: #fcd000;
+}
 
 
   @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
