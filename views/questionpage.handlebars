@@ -31,24 +31,32 @@
             <!-- QUESTION PLACEHOLDER TEXT AREA-->  
             <h2 id="question">{{question}}</h2>
 
-            <button type="button" id="answer-1" class="choice-container">
-                <div class="choice-prefix">A</div>
-                <div class="choice-text" data-number="1">{{answer1}}</div>
+            <button type="button" id="answer-1" data-number="1" class="choice-container">
+                {{!-- <div class="choice-prefix">A</div> --}}
+                {{!-- <div class="choice-text" data-number="1"> --}}
+                    {{answer1}}
+                    {{!-- </div> --}}
             </button>
                     
-            <button type="button" id="answer-2" class="choice-container">
-                <div class="choice-prefix">B</div>
-                <div class="choice-text" data-number="2">{{answer2}}</div>
+            <button type="button" id="answer-2" data-number="2" class="choice-container">
+                {{!-- <div class="choice-prefix">B</div> --}}
+                {{!-- <div class="choice-text" data-number="2"> --}}
+                    {{answer2}}
+                    {{!-- </div> --}}
             </button>
                     
-            <button type="button" id="answer-3" class="choice-container">
-                <div class="choice-prefix">C</div>
-                <div class="choice-text" data-number="3">{{answer3}}</div>
+            <button type="button" id="answer-3" data-number="3" class="choice-container">
+                {{!-- <div class="choice-prefix">C</div> --}}
+                {{!-- <div class="choice-text" data-number="3"> --}}
+                    {{answer3}}
+                    {{!-- </div> --}}
             </button>
                     
-            <button type="button" id="answer-4" class="choice-container">
-                <div class="choice-prefix">D</p>
-                <div class="choice-text" data-number="4">{{answer4}}</div>
+            <button type="button" id="answer-4" data-number="4" class="choice-container">
+                {{!-- <div class="choice-prefix">D</p> --}}
+                {{!-- <div class="choice-text" data-number="4"> --}}
+                    {{answer4}}
+                    {{!-- </div> --}}
             </button>
 
             <p id="correct_answer" style="display: none;">{{correct_answer}}</p>
