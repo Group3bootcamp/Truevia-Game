@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
 * {
     margin: 0;
     padding: 0;
@@ -14,8 +15,6 @@
   }
 
 body {
-    /* background-image: url(/images/1963258.png); */
-    /* opacity: 0.75; */
     background-color: rgb(250, 250, 234);
 }
 
@@ -27,27 +26,27 @@ body {
     display:flex;
     color: var(--secondary)
 }
+
 header {
-    /* display: flex; */
-    /* justify-content: row; */
     padding: 10px;
     background-color: var(--primary);
 }
+
 .header-buttons {
     display: flex;
     justify-content: flex-start;
 }
+
 .btn {
     margin: 5px;
     color: var(--quaternary);
 }
+
 main {
-    /* display: flex; */
     padding: 20px;
     justify-content: center;
     --size: 32px;
-    line-height: var(--size);
-    
+    line-height: var(--size);  
 }
 
 a {
@@ -64,7 +63,6 @@ a:hover {
     text-align: center;
 }
 
-
 footer{
     justify-content: center;
 }
@@ -77,9 +75,6 @@ footer a {
 footer a:hover {
     color: #fcd000;
 }
-
-
-  @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
   
 ol {
   /* max-width: 350px; */
@@ -87,11 +82,13 @@ ol {
   list-style: none;
   padding-left: 40px;
 }
+
 ol li {
   margin: 0 0 0.5rem 0;
   counter-increment: my-awesome-counter;
   position: relative;
 }
+
 ol li::before {
   content: counter(my-awesome-counter);
   color: #fcd000;
@@ -123,27 +120,22 @@ ol li::before {
     transition: transform 200ms ease-in-out;
     box-shadow: 0 0 4rem 0 rgb(0 0 0 / 10%), 0 1rem 2rem -1rem rgb(0 0 0 / 30%);
 }
+
 .score-list:hover {
     transform: scale(1.05);
 }
 
 .quiz-name, .score-display, .quiz-date, .edit-link{
-    /* flex-grow: 2; */
     flex-basis: 10rem;
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
     padding: 5px;
-    /* display: block; */
 }
+
 p{
     margin: 0;
-    
 }
-
-
-
-
 
 .btn:hover
 {
@@ -186,6 +178,4 @@ p{
         width: 100%;
     
     }
-
-
 }
