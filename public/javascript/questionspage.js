@@ -24,12 +24,42 @@ document.getElementById('questionCounter').textContent = questionCount;
 document.getElementById('score').textContent = correctCount;
 document.getElementById('countdown').textContent = timer;
 
-function checkAnswer(event)
+function checkAnswer1()
 {
+    let answer = document.querySelector('#answer-1').textContent.trim();
+    if(answer===correct_answer)
+    {
+        correctCount++;
+    }
 
-    let answerNo = event.path[0].id.split('-')[1];
-    let answer = document.querySelector(`[data-number='${answerNo}']`).textContent.trim();
-    console.log(answer);
+    localStorage.setItem("correctCount", correctCount);
+    document.location.replace('/questionpage');
+}
+function checkAnswer2()
+{
+    let answer = document.querySelector('#answer-2').textContent.trim();
+    if(answer===correct_answer)
+    {
+        correctCount++;
+    }
+
+    localStorage.setItem("correctCount", correctCount);
+    document.location.replace('/questionpage');
+}
+function checkAnswer3()
+{
+    let answer = document.querySelector('#answer-3').textContent.trim();
+    if(answer===correct_answer)
+    {
+        correctCount++;
+    }
+
+    localStorage.setItem("correctCount", correctCount);
+    document.location.replace('/questionpage');
+}
+function checkAnswer4()
+{
+    let answer = document.querySelector('#answer-4').textContent.trim();
     if(answer===correct_answer)
     {
         correctCount++;
@@ -47,7 +77,7 @@ setInterval(function(){
   }
 }, 1000);
 
-document.getElementById("answer-1").addEventListener('click',checkAnswer);
-document.getElementById("answer-2").addEventListener('click',checkAnswer);
-document.getElementById("answer-3").addEventListener('click',checkAnswer);
-document.getElementById("answer-4").addEventListener('click',checkAnswer);
+document.getElementById("answer-1").addEventListener('click',checkAnswer1);
+document.getElementById("answer-2").addEventListener('click',checkAnswer2);
+document.getElementById("answer-3").addEventListener('click',checkAnswer3);
+document.getElementById("answer-4").addEventListener('click',checkAnswer4);
