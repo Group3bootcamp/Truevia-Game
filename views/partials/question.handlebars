@@ -5,24 +5,32 @@
         <!-- QUESTION PLACEHOLDER TEXT AREA END-->
         
         <!-- ANSWER SELECTION CONTAINER-->
-        <button id="answer-1" class="choice-container">
+        <button id="answer-1" class="choice-container" data-number='1'>
             <div class="choice-prefix">A</div>
-            <div class="choice-text" data-number="1">{{answer1}}</div>
+            {{!-- <div class="choice-text" > --}}
+                {{answer1}}
+                {{!-- </div> --}}
         </button>
                 
         <button id="answer-2" class="choice-container">
             <div class="choice-prefix">B</div>
-            <div class="choice-text" data-number="2">{{answer2}}</div>
+            {{!-- <div class="choice-text" data-number="2"> --}}
+                {{answer2}}
+                {{!-- </div> --}}
         </button>
                 
         <button id="answer-3" class="choice-container">
             <div class="choice-prefix">C</div>
-            <div class="choice-text" data-number="3">{{answer3}}</div>
+            {{!-- <div class="choice-text" data-number="3"> --}}
+                {{answer3}}
+                {{!-- </div> --}}
         </button>
                 
         <button id="answer-4" class="choice-container">
             <div class="choice-prefix">D</div>
-            <div class="choice-text" data-number="4">{{answer4}}</div>
+            {{!-- <div class="choice-text" data-number="4"> --}}
+                {{answer4}}
+                {{!-- </div> --}}
         </button>
         <!-- ANSWER SELECTION CONTAINERS END-->
         <p id="correct_answer" style="display: none;">{{correct_answer}}</p>

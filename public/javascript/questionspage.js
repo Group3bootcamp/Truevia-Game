@@ -27,13 +27,14 @@ document.getElementById('countdown').textContent = timer;
 function checkAnswer(event)
 {
 
-    let answerNo = event.path[1].id.split('-')[1];
-    let answer = document.querySelector(`[data-number='${answerNo}']`).textContent;
+    // let answerNo = event.path[1].id.split('-')[1];
+    let answerNo = event.path[0].id.split('-')[1];
+    let answer = document.querySelector('#answer-'+answerNo).textContent.split('↵')[0].trim().substring(1).trim();
     if(answer===correct_answer)
     {
         correctCount++;
     }
-
+    console.log(answer);
     localStorage.setItem("correctCount", correctCount);
     document.location.replace('/questionpage');
 }
