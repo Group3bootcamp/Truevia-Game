@@ -30,6 +30,10 @@ function checkAnswer1()
     if(answer===correct_answer)
     {
         correctCount++;
+        document.getElementById("answer-1").classList="choice-container correct";
+    }
+    else{
+      document.getElementById("answer-1").classList="choice-container incorrect";
     }
 
     localStorage.setItem("correctCount", correctCount);
@@ -42,6 +46,10 @@ function checkAnswer2()
     if(answer===correct_answer)
     {
         correctCount++;
+        document.getElementById("answer-2").classList="choice-container correct";
+    }
+    else{
+      document.getElementById("answer-2").classList="choice-container incorrect";
     }
 
     localStorage.setItem("correctCount", correctCount);
@@ -54,6 +62,10 @@ function checkAnswer3()
     if(answer===correct_answer)
     {
         correctCount++;
+        document.getElementById("answer-3").classList="choice-container correct";
+    }
+    else{
+      document.getElementById("answer-3").classList="choice-container incorrect";
     }
 
     localStorage.setItem("correctCount", correctCount);
@@ -66,6 +78,10 @@ function checkAnswer4()
     if(answer===correct_answer)
     {
         correctCount++;
+        document.getElementById("answer-4").classList="choice-container correct";
+    }
+    else{
+      document.getElementById("answer-4").classList="choice-container incorrect";
     }
 
     localStorage.setItem("correctCount", correctCount);

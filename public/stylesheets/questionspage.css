@@ -69,12 +69,27 @@
     }
     
   /* BACKGROUND COLORS BASED ON ANSWER SELECTION */
-  /* .correct {
+  .correct {
+    border: 0.1rem solid green;
     background-color: green;
   }
+  .correct:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 green;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+  } 
   
   .incorrect {
+    border: 0.1rem solid red;
     background-color: red;
-  } */
+  }
+
+  .incorrect:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 red;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+  } 
   /* BACKGROUND COLORS BASED ON ANSWER SELECTION END */
     /* GAME PAGE STYLING END */
