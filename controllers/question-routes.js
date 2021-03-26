@@ -3,7 +3,7 @@ const opentdb = require('opentdb-api');
 const withAuth = require('../utils/auth');
 
 router.get('/',withAuth, (req, res) => 
-{   
+{   console.log(Number(req.query.amount));
     opentdb.getToken().then(newToken => {
  
         var options = {

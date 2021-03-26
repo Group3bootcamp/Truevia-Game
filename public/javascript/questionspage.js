@@ -5,7 +5,7 @@ let timer = 10;
 const query_url = window.location.toString().split('/')[
   window.location.toString().split('/').length - 1
 ];
-
+//http://localhost:3001/questionpage?cat=9&amount=2&difficulty=any&type=any
 if (!questionCount || questionCount<1)
 {
     questionCount = 0;
@@ -16,7 +16,9 @@ questionCount++;
 localStorage.setItem("questionCount", questionCount);
 localStorage.setItem("correctCount", correctCount);
 
-if(questionCount>10)
+var urlParams = new URLSearchParams(window.location.search);
+
+if(questionCount>urlParams.get('amount'))
 {
     questionCount = 0;
     localStorage.setItem("questionCount", questionCount);
