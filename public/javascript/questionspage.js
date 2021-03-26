@@ -27,8 +27,9 @@ document.getElementById('countdown').textContent = timer;
 function checkAnswer(event)
 {
 
-    let answerNo = event.path[1].id.split('-')[1];
-    let answer = document.querySelector(`[data-number='${answerNo}']`).textContent;
+    let answerNo = event.path[0].id.split('-')[1];
+    let answer = document.querySelector(`[data-number='${answerNo}']`).textContent.trim();
+    console.log(answer);
     if(answer===correct_answer)
     {
         correctCount++;
