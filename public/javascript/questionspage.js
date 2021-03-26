@@ -26,7 +26,7 @@ document.getElementById('countdown').textContent = timer;
 
 function checkAnswer1()
 {
-    let answer = document.querySelector('#answer-1').textContent.trim();
+    let answer = document.querySelector(`[data-number="1"]`).textContent.trim();
     if(answer===correct_answer)
     {
         correctCount++;
@@ -35,9 +35,10 @@ function checkAnswer1()
     localStorage.setItem("correctCount", correctCount);
     document.location.replace('/questionpage');
 }
+
 function checkAnswer2()
 {
-    let answer = document.querySelector('#answer-2').textContent.trim();
+    let answer = document.querySelector(`[data-number="2"]`).textContent.trim();
     if(answer===correct_answer)
     {
         correctCount++;
@@ -46,9 +47,10 @@ function checkAnswer2()
     localStorage.setItem("correctCount", correctCount);
     document.location.replace('/questionpage');
 }
+
 function checkAnswer3()
 {
-    let answer = document.querySelector('#answer-3').textContent.trim();
+    let answer = document.querySelector(`[data-number="3"]`).textContent.trim();
     if(answer===correct_answer)
     {
         correctCount++;
@@ -57,9 +59,10 @@ function checkAnswer3()
     localStorage.setItem("correctCount", correctCount);
     document.location.replace('/questionpage');
 }
+
 function checkAnswer4()
 {
-    let answer = document.querySelector('#answer-4').textContent.trim();
+    let answer = document.querySelector(`[data-number="4"]`).textContent.trim();
     if(answer===correct_answer)
     {
         correctCount++;
