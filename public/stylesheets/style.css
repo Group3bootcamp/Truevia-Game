@@ -156,7 +156,6 @@ p{
 .btn
 {
     color: black;
-    border-color:black;
 }
 
 .btn-success , .btn-outline-success , .btn-primary , .input-group-prepend , .input-group-text
@@ -164,7 +163,6 @@ p{
     border-radius: .3rem;
     color: #fcd000;
     background: black;
-    border-color:black;
 }
 
 .btn-success:hover, .btn-outline-success:hover , .btn-primary:hover
