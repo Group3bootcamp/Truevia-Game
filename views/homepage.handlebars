@@ -8,9 +8,14 @@
                     <h4>10 QUESTIONS 10 SECONDS EACH</h4>
                     <h4>IF YOU ARE OUT OF TIME YOU WILL GO TO THE NEXT QUESTION</h4>
                     <h4>FINAL SCORE IS YOUR CORRECT ANSWERS </h4>
-                    
+
+
+                    <label class="cat-label h3" for="trivia_amount">Number of Questions:</label>
+                    <input type="number" name="trivia_amount" id="trivia_amount" class="form-control" min="1" max="50" value="10">
+
+                    <br>                   
                     <label class="cat-label h3" for="Category">Choose a Category:</label>
-                    <select class="form-select" name="Category" id="category">
+                    <select class="form-select" name="Category" id="trivia_category">
                         <option value="9">General Knowledge</option>
                         <option value="10">Entertainment: Books</option>
                         <option value="11">Entertainment: Film</option>
@@ -37,12 +42,24 @@
                         <option value="32">Entertainment: Cartoon & Animations</option>
                     </select>
 
-                    {{!-- <label for="difficulty">Choose a Difficulty:</label>
-                    <select name="difficulty" id="difficulty">
+                    <br>
+
+                    <label class="cat-label h3" for="trivia_difficulty">Select Difficulty: </label>
+                    <select name="trivia_difficulty" id="trivia_difficulty" class="form-control">
+                        <option value="any">Any Difficulty</option>
                         <option value="easy">Easy</option>
                         <option value="medium">Medium</option>
                         <option value="hard">Hard</option>
-                    </select> --}}
+                    </select>
+
+                    <br>
+
+                    <label class="cat-label h3" for="trivia_type">Select Type: </label>
+                    <select name="trivia_type" id="trivia_type" class="form-control">>
+                        <option value="any">Any Type</option>
+                        <option value="multiple">Multiple Choice</option>
+                        <option value="boolean">True / False</option>
+                    </select>
 
                     <button type="button" id="new-game" class="btn btn-success btn-lg mt-3">Start New Game</button>
                 </div>

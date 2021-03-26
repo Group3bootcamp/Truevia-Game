@@ -2,15 +2,15 @@ const router = require('express').Router();
 const opentdb = require('opentdb-api');
 const withAuth = require('../utils/auth');
 
-router.get('/:cat',withAuth, (req, res) => 
+router.get('/',withAuth, (req, res) => 
 {   
     opentdb.getToken().then(newToken => {
  
         var options = {
-            amount: 1,
-            category: req.params.cat,
-            difficulty: 'easy',
-            type: 'multiple',
+            amount: Number(req.query.amount),
+            category: req.query.cat,
+            difficulty: req.query.difficulty,
+            type: req.query.type,
             token: newToken
         };
        

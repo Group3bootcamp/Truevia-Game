@@ -2,7 +2,7 @@ let correct_answer= document.getElementById('correct_answer').textContent;
 let questionCount = localStorage.getItem("questionCount");
 let correctCount = localStorage.getItem("correctCount");
 let timer = 10;
-const cat = window.location.toString().split('/')[
+const query_url = window.location.toString().split('/')[
   window.location.toString().split('/').length - 1
 ];
 
@@ -40,7 +40,7 @@ function checkAnswer1()
     }
 
     localStorage.setItem("correctCount", correctCount);
-    document.location.replace(`/questionpage/${cat}`);
+    document.location.replace(`/${query_url}`);
 }
 
 function checkAnswer2()
@@ -56,7 +56,7 @@ function checkAnswer2()
     }
 
     localStorage.setItem("correctCount", correctCount);
-    document.location.replace(`/questionpage/${cat}`);
+    document.location.replace(`/${query_url}`);
 }
 
 function checkAnswer3()
@@ -72,7 +72,7 @@ function checkAnswer3()
     }
 
     localStorage.setItem("correctCount", correctCount);
-    document.location.replace(`/questionpage/${cat}`);
+    document.location.replace(`/${query_url}`);
 }
 
 function checkAnswer4()
@@ -88,14 +88,14 @@ function checkAnswer4()
     }
 
     localStorage.setItem("correctCount", correctCount);
-    document.location.replace(`/questionpage/${cat}`);
+    document.location.replace(`/${query_url}`);
 }
 
 setInterval(function(){
   timer--;
   document.getElementById('countdown').textContent = timer;
   if (timer === 0) {
-    document.location.replace(`/questionpage/${cat}`);
+    document.location.replace(`/${query_url}`);
   }
 }, 1000);
 

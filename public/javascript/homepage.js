@@ -3,9 +3,15 @@ localStorage.setItem("correctCount", -1);
 
 function startgame ()
 {
-    var cat = document.getElementById("category").value.trim();
-    console.log(cat);
-    document.location.replace(`/questionpage/${cat}`);
+    var amount = document.getElementById("trivia_amount").value.trim();
+    var cat = document.getElementById("trivia_category").value.trim();
+    var difficulty = document.getElementById("trivia_difficulty").value.trim();
+    var type = document.getElementById("trivia_type").value.trim();
+    
+
+    console.log("amount: ", amount, " cat: ", cat, " diff: ", difficulty, " type: ", type);
+    document.location.replace(`/questionpage?cat=${cat}&amount=${amount}&difficulty=${difficulty}&type=${type}`);
+
 }
 
 document.getElementById("new-game").addEventListener('click',startgame);
