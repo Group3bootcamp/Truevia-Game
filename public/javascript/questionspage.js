@@ -27,6 +27,12 @@ document.getElementById('questionCounter').textContent = questionCount;
 document.getElementById('score').textContent = correctCount;
 document.getElementById('countdown').textContent = timer;
 
+function nextquestion()
+{
+  localStorage.setItem("correctCount", correctCount);
+  document.location.replace(`/questionpage/${cat}`);
+}
+
 function checkAnswer1()
 {
     let answer = document.querySelector(`[data-number="1"]`).textContent.trim();
@@ -41,8 +47,7 @@ function checkAnswer1()
       document.getElementById("incorrect-sound").play();
     }
 
-    localStorage.setItem("correctCount", correctCount);
-    document.location.replace(`/questionpage/${cat}`);
+    setTimeout(nextquestion, 500);
 }
 
 function checkAnswer2()
@@ -59,8 +64,7 @@ function checkAnswer2()
       document.getElementById("incorrect-sound").play();
     }
 
-    localStorage.setItem("correctCount", correctCount);
-    document.location.replace(`/questionpage/${cat}`);
+    setTimeout(nextquestion, 500);
 }
 
 function checkAnswer3()
@@ -77,8 +81,7 @@ function checkAnswer3()
       document.getElementById("incorrect-sound").play();
     }
 
-    localStorage.setItem("correctCount", correctCount);
-    document.location.replace(`/questionpage/${cat}`);
+    setTimeout(nextquestion, 500);
 }
 
 function checkAnswer4()
@@ -95,8 +98,7 @@ function checkAnswer4()
       document.getElementById("incorrect-sound").play();
     }
 
-    localStorage.setItem("correctCount", correctCount);
-    document.location.replace(`/questionpage/${cat}`);
+    setTimeout(nextquestion, 500);
 }
 
 setInterval(function(){
