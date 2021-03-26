@@ -39,7 +39,7 @@ if (score>=0)
     saveScore(score);
 }
 
-if (parseInt(score_display) )
+if (parseInt(score_display)>=0 )
 {
     document.getElementById('finalScore').textContent = 'Your Score is : '+ score_display;
 }

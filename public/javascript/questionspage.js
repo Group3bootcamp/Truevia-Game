@@ -11,6 +11,7 @@ if (!questionCount || questionCount<1)
 
 questionCount++;
 localStorage.setItem("questionCount", questionCount);
+localStorage.setItem("correctCount", correctCount);
 
 if(questionCount>10)
 {

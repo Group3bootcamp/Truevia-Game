@@ -36,13 +36,15 @@
     margin-bottom: 0.5rem;
     width: 100%;
     font-size: 1.8rem;
-    border: 0.1rem solid rgb(86, 165, 235, 0.25);
-    background-color: white;
+    border: 0.1rem solid gold;
+    background-color: rgb(251,251,204);
+    border-radius: 5%;
+    align-items: center;
   }
     
   .choice-container:hover {
       cursor: pointer;
-      box-shadow: 0 0.4rem 1.4rem 0 rgba(94, 182, 54, 0.692);
+      box-shadow: 0 0.4rem 1.4rem 0 gold;
       transform: translateY(-0.1rem);
       transition: transform 150ms;
     } 
@@ -52,9 +54,11 @@
     /* LETTER BESIDE QUESTION */
   .choice-prefix {
       padding: 2.5rem 2.5rem;
-      background-color: #56a5eb;
-      color: white;
+      background-color: black;
+      color: gold;
       margin: 0px;
+      border-top-left-radius: 5%;
+      border-bottom-left-radius: 5%;
     }
     /* LETTER BESIDE QUESTION END */
   

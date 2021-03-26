@@ -59,14 +59,15 @@ a:hover {
     color: black;
 }
 
-footer {
-    background-color: var(--primary);
-    padding: 30px;
+.footer1 , .footer2{
+    width: 100%;
+    text-align: center;
 }
 
-footer p:last-child {
-    margin-bottom: 0;
-  }
+
+footer{
+    justify-content: center;
+}
 
 footer a {
     text-decoration: none;
@@ -185,4 +186,6 @@ p{
         width: 100%;
     
     }
+
+
 }
