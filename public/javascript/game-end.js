@@ -133,7 +133,7 @@ if (page==='cat')
         window.location.toString().split('/').length - 1
       ];
     let cate = getCategory(cat_id);
-    cate = cate.replace('%20',' ');
+    cate = cate.split('%20').join(' ');
     document.getElementById('score-sub').textContent = cate;
 }
 
