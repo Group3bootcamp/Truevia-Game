@@ -31,7 +31,7 @@
   
   /* BOX THE QUESTION RESIDES IN  */
   
-   .choice-container {
+   /* .choice-container {
     display: flex;
     margin-bottom: 0.5rem;
     width: 100%;
@@ -47,19 +47,19 @@
       box-shadow: 0 0.4rem 1.4rem 0 gold;
       transform: translateY(-0.1rem);
       transition: transform 150ms;
-    } 
+    }  */
     /* BOX THE QUESTION RESIDES IN END */
   
   
     /* LETTER BESIDE QUESTION */
-  .choice-prefix {
+  /* .choice-prefix {
       padding: 2.5rem 2.5rem;
       background-color: black;
       color: gold;
       margin: 0px;
       border-top-left-radius: 5%;
       border-bottom-left-radius: 5%;
-    }
+    } */
     /* LETTER BESIDE QUESTION END */
   
   
