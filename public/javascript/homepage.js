@@ -4,7 +4,7 @@ localStorage.setItem("correctCount", -1);
 function startgame ()
 {
     var cat = document.getElementById("category").value.trim();
-    console.log(cat);
+    localStorage.setItem("category",cat);
     document.location.replace(`/questionpage/${cat}`);
 }
 

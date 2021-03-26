@@ -11,6 +11,7 @@ router.get('/', (req, res) => {
             'id',
             'score_amount',
             'created_at',
+            'category_id'
     ],
     limit: 3,
     order: [['score_amount', 'DESC']], 
@@ -51,7 +52,8 @@ router.get('/game-end/:score', (req, res) => {
         attributes: [
             'id',
             'score_amount',
-            'created_at'
+            'created_at',
+            'category_id'
     ],
     order: [['score_amount', 'DESC']], 
         include: [
@@ -85,6 +87,50 @@ router.get('/game-end/:score', (req, res) => {
 });
 
 // get all scores for homepage
+router.get('/game-end/cat/:cat', (req, res) => {
+    console.log('======================');
+    Score.findAll({
+        where:
+        {
+            category_id:req.params.cat
+        },
+        attributes: [
+            'id',
+            'score_amount',
+            'created_at',
+            'category_id'
+    ],
+    order: [['score_amount', 'DESC']], 
+        include: [
+        {
+            model: Comment,
+            attributes: ['id', 'comment_text', 'score_id', 'user_id', 'created_at'],
+            include: {
+                model: User,
+                attributes: ['username']
+            }
+        },
+        {
+            model: User,
+            attributes: ['username']
+        }
+    ]
+    })
+    .then(dbScoreData => {
+        const scores = dbScoreData.map(score => score.get({ plain: true }));
+        // This should lead to the high scores page I believe
+        res.render('game-end', {
+            scores,
+            loggedIn: req.session.loggedIn
+        });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+// get all scores for homepage
 router.get('/game-end', (req, res) => {
     console.log('======================');
     Score.findAll({
@@ -92,6 +138,7 @@ router.get('/game-end', (req, res) => {
             'id',
             'score_amount',
             'created_at',
+            'category_id'
     ],
     order: [['score_amount', 'DESC']], 
         include: [
@@ -134,6 +181,7 @@ router.get('/score/:id', (req, res) => {
         'id',
         'score_amount',
         'created_at',
+        'category_id'
     ],
         include: [
         {

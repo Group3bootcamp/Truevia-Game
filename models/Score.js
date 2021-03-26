@@ -16,7 +16,10 @@ Score.init(
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    
+    category_id:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },  
     user_id: {
         type: DataTypes.INTEGER,
         references: {

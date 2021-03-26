@@ -11,7 +11,8 @@ router.get('/',withAuth, (req, res) => {
         attributes: [
             'id',
             'score_amount',
-            'created_at'
+            'created_at',
+            'category_id'
     ],
     order: [['score_amount', 'DESC']], 
         include: [
