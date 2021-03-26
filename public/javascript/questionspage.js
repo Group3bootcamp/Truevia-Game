@@ -34,9 +34,11 @@ function checkAnswer1()
     {
         correctCount++;
         document.getElementById("answer-1").classList="choice-container correct";
+        document.getElementById("correct-sound").play();
     }
     else{
       document.getElementById("answer-1").classList="choice-container incorrect";
+      document.getElementById("incorrect-sound").play();
     }
 
     localStorage.setItem("correctCount", correctCount);
@@ -50,9 +52,11 @@ function checkAnswer2()
     {
         correctCount++;
         document.getElementById("answer-2").classList="choice-container correct";
+        document.getElementById("correct-sound").play();
     }
     else{
       document.getElementById("answer-2").classList="choice-container incorrect";
+      document.getElementById("incorrect-sound").play();
     }
 
     localStorage.setItem("correctCount", correctCount);
@@ -66,9 +70,11 @@ function checkAnswer3()
     {
         correctCount++;
         document.getElementById("answer-3").classList="choice-container correct";
-    }
+        document.getElementById("correct-sound").play();
+     }
     else{
       document.getElementById("answer-3").classList="choice-container incorrect";
+      document.getElementById("incorrect-sound").play();
     }
 
     localStorage.setItem("correctCount", correctCount);
@@ -82,9 +88,11 @@ function checkAnswer4()
     {
         correctCount++;
         document.getElementById("answer-4").classList="choice-container correct";
+        document.getElementById("correct-sound").play();
     }
     else{
       document.getElementById("answer-4").classList="choice-container incorrect";
+      document.getElementById("incorrect-sound").play();
     }
 
     localStorage.setItem("correctCount", correctCount);

@@ -106,6 +106,18 @@ function filter()
     }
 }
 
+function showCategory ()
+{
+    document.getElementById("category-game").style.visibility='visible';
+}
+
+function startgame ()
+{
+    var cat = document.getElementById("category-game").value.trim();
+    localStorage.setItem("category",cat);
+    document.location.replace(`/questionpage/${cat}`);
+}
+
 const score_display = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
   ];
@@ -138,3 +150,5 @@ if (page==='cat')
 }
 
 document.getElementById('category').addEventListener('change',filter);
+document.getElementById("new-game").addEventListener('click',showCategory);
+document.getElementById("category-game").addEventListener('change',startgame);
