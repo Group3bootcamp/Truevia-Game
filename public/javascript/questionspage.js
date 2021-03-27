@@ -2,7 +2,7 @@ let correct_answer= document.getElementById('correct_answer').textContent;
 let questionCount = localStorage.getItem("questionCount");
 let correctCount = localStorage.getItem("correctCount");
 let timer = 10;
-const cat = window.location.toString().split('/')[
+const query_url = window.location.toString().split('/')[
   window.location.toString().split('/').length - 1
 ];
 
@@ -16,7 +16,9 @@ questionCount++;
 localStorage.setItem("questionCount", questionCount);
 localStorage.setItem("correctCount", correctCount);
 
-if(questionCount>10)
+var urlParams = new URLSearchParams(window.location.search);
+
+if(questionCount>urlParams.get('amount'))
 {
     questionCount = 0;
     localStorage.setItem("questionCount", questionCount);
@@ -30,7 +32,7 @@ document.getElementById('countdown').textContent = timer;
 function nextquestion()
 {
   localStorage.setItem("correctCount", correctCount);
-  document.location.replace(`/questionpage/${cat}`);
+  document.location.replace(`/${query_url}`);
 }
 
 function checkAnswer1()
@@ -126,7 +128,7 @@ setInterval(function(){
   timer--;
   document.getElementById('countdown').textContent = timer;
   if (timer === 0) {
-    document.location.replace(`/questionpage/${cat}`);
+    document.location.replace(`/${query_url}`);
   }
 }, 1000);
 
