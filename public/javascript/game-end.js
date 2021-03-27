@@ -150,5 +150,13 @@ if (page==='cat')
 }
 
 document.getElementById('category').addEventListener('change',filter);
-document.getElementById("new-game").addEventListener('click',showCategory);
-document.getElementById("category-game").addEventListener('change',startgame);
+
+if(document.getElementById("new-game"))
+{
+    document.getElementById("new-game").addEventListener('click',showCategory);
+}
+
+if(document.getElementById("category-game"))
+{
+    document.getElementById("category-game").addEventListener('change',startgame);
+}

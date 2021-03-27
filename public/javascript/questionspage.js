@@ -35,6 +35,11 @@ function nextquestion()
 
 function checkAnswer1()
 {
+  document.getElementById("answer-1").setAttribute('disabled',true);
+  document.getElementById("answer-2").setAttribute('disabled',true);
+  document.getElementById("answer-3").setAttribute('disabled',true);
+  document.getElementById("answer-4").setAttribute('disabled',true);
+
     let answer = document.querySelector(`[data-number="1"]`).textContent.trim();
     if(answer===correct_answer)
     {
@@ -52,6 +57,11 @@ function checkAnswer1()
 
 function checkAnswer2()
 {
+    document.getElementById("answer-1").setAttribute('disabled',true);
+    document.getElementById("answer-2").setAttribute('disabled',true);
+    document.getElementById("answer-3").setAttribute('disabled',true);
+    document.getElementById("answer-4").setAttribute('disabled',true);
+
     let answer = document.querySelector(`[data-number="2"]`).textContent.trim();
     if(answer===correct_answer)
     {
@@ -69,6 +79,11 @@ function checkAnswer2()
 
 function checkAnswer3()
 {
+  document.getElementById("answer-1").setAttribute('disabled',true);
+  document.getElementById("answer-2").setAttribute('disabled',true);
+  document.getElementById("answer-3").setAttribute('disabled',true);
+  document.getElementById("answer-4").setAttribute('disabled',true);
+
     let answer = document.querySelector(`[data-number="3"]`).textContent.trim();
     if(answer===correct_answer)
     {
@@ -86,7 +101,13 @@ function checkAnswer3()
 
 function checkAnswer4()
 {
+  document.getElementById("answer-1").setAttribute('disabled',true);
+  document.getElementById("answer-2").setAttribute('disabled',true);
+  document.getElementById("answer-3").setAttribute('disabled',true);
+  document.getElementById("answer-4").setAttribute('disabled',true);
+
     let answer = document.querySelector(`[data-number="4"]`).textContent.trim();
+
     if(answer===correct_answer)
     {
         correctCount++;

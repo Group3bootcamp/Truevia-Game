@@ -40,11 +40,11 @@
         </div>
         {{/if}}
 
-                    <div class="score-display w-100" id="score-display">
-                <div class="top-scores text-center mt-5 mb-3" id="top-scores">
-                    <h2><span id= 'score-sub'>All</span> Scores</h2>
-
-                    <select class="" name="Category" id="category">
+        <div class="container d-flex align-items-center justify-content-center my-3">
+            <div class="top-scores text-center mb-3" id="top-scores">
+                <h2><span id= 'score-sub'>All</span> Scores</h2>
+                <div>
+                    <select class="form-select" name="Category" id="category">
                         <option value="" disabled selected>Filter by category</option>
                         <option value="0">All</option>
                         <option value="9">General Knowledge</option>
@@ -73,6 +73,10 @@
                         <option value="32">Entertainment: Cartoon & Animations</option>
                     </select>
                 </div>
+            </div>
+        </div>
+
+            <div class="score-display w-100" id="score-display">
                 <div class="score-card" id="score-card">
                     <div class="jumbotron jumbotron-fluid">
                         <div class="container">
