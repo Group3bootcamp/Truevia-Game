@@ -7,6 +7,7 @@
     background-color: rgb(251,251,204);
     border-radius: 5%;
     align-items: center;
+    align-items: stretch;
   }
     
   .choice-container:hover {
@@ -17,7 +18,8 @@
     } 
 
   .choice-prefix {
-      padding: 2.5rem 2.5rem;
+      padding: 1.5rem;
+      
       background-color: black;
       color: gold;
       margin: 0px;
