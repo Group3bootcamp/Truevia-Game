@@ -149,7 +149,7 @@ ol li::before {
     margin-bottom: 2rem;
     /* background: gold; */
     /* background: var(--primary); */
-    background-image: linear-gradient(to right, var(--primary) , gold , var(--primary) );
+    background-image: radial-gradient( gold , var(--primary) );
     /* background-size:  100%; */
   /* background-position: 50% 100%; */
   /* background-repeat: no-repeat; */
