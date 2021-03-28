@@ -1,0 +1,32 @@
+  <main>
+      <div class="container">
+          <div class="logo-banner d-flex justify-content-between jumbotron jumbotron-fluid m-3">
+              <div class="dashboard-header">
+                  <h1>Dashboard of {{username}}</h1>
+              </div>
+          </div>
+
+          <div class="score-display " id="score-display">
+              <div class="top-scores text-center mt-3 mb-3" id="score-display-area">
+                  <h2 class="your-score">Your High Scores</h2>
+              </div>
+              <div class="score-card">
+                  <div class="jumbotron jumbotron-fluid">
+                      <div class="container">
+                          {{#if scores.length}}
+                              <section>
+                                  <ol class="list-group list-group-numbered">
+                                      {{#each scores as |score|}}
+                                          {{> scores-list score}}
+                                      {{/each}}
+                                  </ol>
+                              </section>
+                          {{/if}}
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </main>
+
+  <script src="/javascript/dashboard.js"></script>

@@ -1,0 +1,38 @@
+<main>
+    <audio id="correct-sound">
+        <source src="/sounds/correct.mp3">
+    </audio>
+    <audio id="incorrect-sound">
+        <source src="/sounds/incorrect.mp3">
+    </audio>
+    <!-- PROGRESS TRACKER INFORMATION -->
+    <!-- QUIZ PROGRESS STATUS DISPLAY -->
+    <div class="container d-flex justify-content-between flex-wrap my-4">
+        <div id="hud-item" class="d-flex">
+            <h3 class="hud-prefix"> Question :</h1>
+            <h3 class="hud-main-text" id="questionCounter"></h1>
+        </div>  
+
+        <!-- QUIZ PROGRESS STATUS DISPLAY END-->
+        
+        <!-- QUIZ CORRECT ANSWER DISPLAY -->
+        <div id="hud-item" class="d-flex text-right">
+            <h3 class="hud-prefix"> Correct :</h1>
+            <h3 class="hud-main-text" id="score">0</h1>
+        </div>
+        <!-- QUIZ CORRECT ANSWER DISPLAY END -->
+        
+        <!-- GAME TIMER -->
+        <div id="hud-item" class="d-flex">
+            <h3 class="hud-prefix"> Time Remaining :</h1>
+            <h3 class="hud-main-text" id="countdown"></h1>
+        </div> 
+
+        <!-- GAME TIMER END -->
+        <!-- PROGRESS TRACKER INFORMATION END-->
+    </div>
+
+    {{> question this}}
+
+</main>
+<script src="/javascript/questionspage.js"></script>

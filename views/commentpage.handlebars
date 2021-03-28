@@ -1,0 +1,34 @@
+<main>
+    <div class="container my-3">
+        <div class="title text-center">
+            <h1>Comment Page</h1>
+        </div>
+        <div class="jumbotron jumbotron-fluid my-3">
+            <div class="container comment-header">
+                <h2 class="user-name-highscore font-weight-bold" id="user-name-highscore">Score: {{score.score_amount}} on {{score.category_id}}</h2>
+                <h2 class="score-display" id="score-dispaly">Player {{score.user.username}} on {{format_date score.created_at}}</h2>
+            </div>
+        </div>
+
+        <div class="comment-section container-lg my-5" id="comment-section">
+            <div class="comments-header" id="comments-header">
+                <h2>Comments:</h2>
+            </div> 
+            <div class="message-display" id="message-display">
+                <div class="user-comments" id="user-comments"> 
+                    {{>comment-list score.comments}}
+                </div>
+                {{#if loggedIn}}
+                    <form class="form-group my-5" id="comment-form">
+                        <label for="comment-text" ><h1>Write a message here!</h1></label>
+                        <textarea class="form-control" id="comment-text" rows="3" ></textarea>
+                        <button type="submit" class="btn btn-primary">Comment</button>
+                    </form>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="/javascript/commentpage.js"></script>
+

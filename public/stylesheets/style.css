@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    /* font-family: "Saira"; */
+    
+}
+
+:root {
+    --primary: rgb(251,251,204);
+    --secondary: rgb(91,203,204);
+    --tertiary: rgb(72,97,138);
+    --quaternary: black;
+    --quinary: rgb(156,188,194);
+  }
+
+body {
+    background-color: rgb(250, 250, 234);
+}
+
+.card{
+    background: var(--primary);
+}
+
+.truevia-container {
+    display:flex;
+    color: var(--secondary)
+}
+
+header {
+    padding: 10px;
+    background-color: var(--primary);
+    /* font-family: 'Electrolize', sans-serif; */
+    /* font-family: 'Jura', sans-serif; */
+    font-family: 'Quantico', sans-serif;
+    font-weight: bold;
+}
+
+h1, h2 {
+    font-family: 'Quantico', sans-serif;
+}
+
+.comment-header{
+    /* background-color: gold; */
+    background-image: radial-gradient( rgb(251,251,200),rgb(251,251,170));
+    border-color: black;
+    border-width: 2px;
+    border-style: dashed;
+    border-radius: 20px;
+}
+
+.score-title
+{
+    font-family: 'Quantico', sans-serif; 
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: flex-start;
+}
+
+header a {
+    font-size: 2.5rem;
+}
+
+.btn {
+    margin: 5px;
+    color: var(--quaternary);
+}
+
+main {
+    padding: 20px;
+    justify-content: center;
+    --size: 32px;
+    line-height: var(--size);  
+    /* font-family: 'Electrolize', sans-serif; */
+    font-family: 'Jura', sans-serif;
+    /* font-family: 'Quantico', sans-serif; */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+.footer1 , .footer2{
+    width: 100%;
+    text-align: center;
+}
+
+footer{
+    justify-content: center;
+    /* font-family: 'Electrolize', sans-serif; */
+    /* font-family: 'Jura', sans-serif; */
+    font-family: 'Quantico', sans-serif;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    color: #fcd000;
+}
+  
+ol {
+  /* max-width: 350px; */
+  counter-reset: my-awesome-counter;
+  list-style: none;
+  padding-left: 40px;
+}
+
+ol li {
+  margin: 0 0 0.5rem 0;
+  counter-increment: my-awesome-counter;
+  position: relative;
+}
+
+ol li::before {
+  content: counter(my-awesome-counter);
+  color: #fcd000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  --size: 50px;
+  left: calc(-1 * var(--size) - 10px);
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  top: 0;
+  transform: rotate(-10deg);
+  background: black;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 1px 1px 0 #999;
+}
+
+.score-list
+{
+    position: relative;
+    display: flex;
+    border-radius: 4rem;
+    margin-bottom: 2rem;
+    /* background: gold; */
+    /* background: var(--primary); */
+    background-image: radial-gradient( rgb(251,251,200),rgb(251,251,170));
+    /* background-size:  100%; */
+  /* background-position: 50% 100%; */
+  /* background-repeat: no-repeat; */
+    transform-origin: left;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+    box-shadow: 0 0 4rem 0 rgb(0 0 0 / 10%), 0 1rem 2rem -1rem rgb(0 0 0 / 30%);
+}
+
+.score-list:hover {
+    transform: scale(1.05);
+}
+
+.quiz-name, .score-display, .quiz-date, .edit-link{
+    flex-basis: 10rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+
+p{
+    margin: 0;
+}
+
+.btn:hover
+{
+    color: #fcd000;
+    background: black;
+}
+
+.btn:focus
+{
+    color: #fcd000;
+    background: black;
+}
+
+.btn:active
+{
+    color: #fcd000;
+    background: black;
+}
+
+.btn
+{
+    color: black;
+}
+
+.btn-success , .btn-outline-success , .btn-primary , .input-group-text
+{
+    border-radius: .3rem;
+    color: #fcd000;
+    background: black;
+}
+
+.input-group-prepend
+{
+    width: 100%;
+}
+
+.btn-success:hover, .btn-outline-success:hover , .btn-primary:hover
+{
+    color: black;
+    background: #fcd000;
+}
+
+.cat-label{
+    margin-top: 30px;
+    padding: 10px;
+} 
+
+#trivia_category , #trivia_difficulty{
+    max-width: 300px;
+}
+
+#signup-form, #login-form
+{
+    width: 21rem;
+}
+
+@media screen and (max-width: 700px)
+{
+    .main-logo{
+        width: 95%; 
+        height: 95%;
+
+    }
+
+    .header-nav{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-nav div{
+        width: 100%;
+    
+    }
+}
