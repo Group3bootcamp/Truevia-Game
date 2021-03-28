@@ -19,7 +19,11 @@ Score.init(
     category_id:{
         type: DataTypes.STRING,
         allowNull: false
-    },  
+    },
+    difficulty:{
+        type: DataTypes.STRING,
+        allowNull: false
+    }, 
     user_id: {
         type: DataTypes.INTEGER,
         references: {

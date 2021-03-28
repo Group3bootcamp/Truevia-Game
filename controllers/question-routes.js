@@ -7,10 +7,10 @@ router.get('/',withAuth, (req, res) =>
     opentdb.getToken().then(newToken => {
  
         var options = {
-            amount: Number(req.query.amount),
+            amount: 10,
             category: req.query.cat,
             difficulty: req.query.difficulty,
-            type: req.query.type,
+            type: 'multiple',
             token: newToken
         };
        

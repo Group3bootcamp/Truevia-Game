@@ -55,7 +55,7 @@ function getCategory(category)
     }
 }
 
-async function saveScore(score,category) 
+async function saveScore(score,category,diff) 
 {
     
     localStorage.setItem("questionCount", -1);
@@ -68,7 +68,8 @@ async function saveScore(score,category)
             body: JSON.stringify(
             {
                 score_amount: score,
-                category_id: cat
+                category_id: cat,
+                difficulty: diff
                 }
             ),
             headers:
@@ -108,15 +109,27 @@ function filter()
 
 function showCategory ()
 {
-    document.getElementById("category-game").style.visibility='visible';
+    document.getElementById("trivia_category").style.visibility='visible';
+    document.getElementById("trivia_difficulty").style.visibility='visible';
+    document.getElementById("start-btn").style.visibility='visible';
 }
 
 function startgame ()
 {
-    var cat = document.getElementById("category-game").value.trim();
+    var cat = document.getElementById("trivia_category").value.trim();
+    var difficulty = document.getElementById("trivia_difficulty").value.trim();
     localStorage.setItem("category",cat);
-    document.location.replace(`/questionpage/${cat}`);
+    localStorage.setItem("difficulty",difficulty);  
+    if(!cat || !difficulty)
+    {
+        alert("please choose the category and difficulty");
+    }
+
+
+    document.location.replace(`/questionpage?cat=${cat}&difficulty=${difficulty}`);
+
 }
+
 
 const score_display = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
@@ -128,13 +141,14 @@ const page = window.location.toString().split('/')[
 
 const score = localStorage.getItem("correctCount");
 const category = localStorage.getItem("category");
+const diff = localStorage.getItem("difficulty");
 
 if (score>=0)
 {
-    saveScore(score,category);
+    saveScore(score,category, diff);
 }
 
-if (parseInt(score_display)>=0 && page==='game-end')
+if (parseInt(score_display)>=0 && document.getElementById('finalScore'))
 {
     document.getElementById('finalScore').textContent = 'Your Score is : '+ score_display;
 }
@@ -156,7 +170,7 @@ if(document.getElementById("new-game"))
     document.getElementById("new-game").addEventListener('click',showCategory);
 }
 
-if(document.getElementById("category-game"))
+if(document.getElementById("start-btn"))
 {
-    document.getElementById("category-game").addEventListener('change',startgame);
+    document.getElementById("start-btn").addEventListener('click',startgame);
 }

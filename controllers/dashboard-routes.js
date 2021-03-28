@@ -12,7 +12,8 @@ router.get('/',withAuth, (req, res) => {
             'id',
             'score_amount',
             'created_at',
-            'category_id'
+            'category_id',
+            'difficulty'
     ],
     order: [['score_amount', 'DESC']], 
         include: [

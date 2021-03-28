@@ -5,19 +5,23 @@
             <a href="/score/{{id}}" class="d-flex justify-content-around align-items-center flex-wrap w-100">
                 {{!-- <div class="d-flex justify-content-around align-items-center flex-wrap w-50"> --}}
                     <div class="quiz-name" id="quiz-name">
-                        Player: {{user.username}}
+                        <span class="score-title">Player:</span> <br> {{user.username}}
                     </div>
                     <div class="score-display" id="score-display">
-                        Score: {{score_amount}}
+                        <span class="score-title">Score:</span> <br> {{score_amount}}
                     </div>
                 {{!-- </div> --}}
                     <div class="quiz-date" id="quiz-date">
-                        {{category_id}}
+                        <span class="score-title">Category:</span> <br> {{category_id}}
+                    </div>
+
+                    <div class="quiz-date" id="quiz-date">
+                        <span class="score-title">Difficulty:</span><br>{{difficulty}}
                     </div>
 
                 {{!-- <div class="d-flex justify-content-around align-items-center flex-wrap w-50"> --}}
                     <div class="quiz-date" id="quiz-date">
-                        {{format_date created_at}}
+                        <span class="score-title">Date:</span> <br> {{format_date created_at}}
                     </div>
                     <div class="edit-link">
                         {{comments.length}} {{format_plural "comment" comments.length}}

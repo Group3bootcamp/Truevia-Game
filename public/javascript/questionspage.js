@@ -18,7 +18,7 @@ localStorage.setItem("correctCount", correctCount);
 
 var urlParams = new URLSearchParams(window.location.search);
 
-if(questionCount>urlParams.get('amount'))
+if(questionCount>10)
 {
     questionCount = 0;
     localStorage.setItem("questionCount", questionCount);

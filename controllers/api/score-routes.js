@@ -9,7 +9,8 @@ router.get('/', (req, res) => {
         'id',
         'score_amount',
         'created_at',
-        'category_id'
+        'category_id',
+        'difficulty'
     ],
     order: [['score_amount', 'DESC']], 
     include: [
@@ -44,7 +45,8 @@ router.get('/:id', (req, res) => {
         'id',
         'score_amount',
         'created_at',
-        'category_id'
+        'category_id',
+        'difficulty'
     ],
     include: [
         {
@@ -80,7 +82,8 @@ router.post('/',withAuth, (req, res) => {
     Score.create({
         score_amount: req.body.score_amount,
         user_id: req.session.user_id,
-        category_id:req.body.category_id
+        category_id:req.body.category_id,
+        difficulty:req.body.difficulty
     })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
