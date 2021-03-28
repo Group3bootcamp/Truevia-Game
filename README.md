@@ -31,7 +31,7 @@
 
 # Description
 
-🔍 A Trivia game application made using node.js, express.js, mySQL, handlebars.js, Open Trivia DB API, bycrypt.js, and Sequelize ORM that challenges users in a time limited Trivia game. After the game is finished, their high score is posted to a leaderboard and emailed to them. Also, users can comment on each others high scores.
+🔍 A Trivia game application made using node.js, express.js, mySQL, handlebars.js, Open Trivia DB API, bycrypt.js, and Sequelize ORM that challenges users in a time limited Trivia game. After the game is finished, their high score is posted to a leader board and emailed to them. Also, users can comment on each others high scores.
 
 ![Image 1](./public/images/truevia-game.gif)
 
@@ -65,7 +65,7 @@
 
 `mysql -u root -p`
 
-Enter PW when promted
+Enter PW when prompted
 
 `source db/schema.sql`
 
@@ -91,8 +91,8 @@ Make an account and enjoy the game!
 
 AS A User I want to play a trivia game,
 
-I WANT to see how I compare to others on a leaderboard
-SO THAT I can improve and move up the leaderboard
+I WANT to see how I compare to others on a leader board
+SO THAT I can improve and move up the leader board
 
 WHEN I visit the site for the first time,
 
@@ -104,7 +104,7 @@ THEN I am prompted to create a username, password and give my email address.
 
 WHEN I click the sign up button,
 
-THEN my user information is saved and I am logged into the site.
+THEN my user information is saved and I am logged into the site and am sent an email thanking me for signing up.
 
 WHEN I revisit the site later and choose to login,
 
@@ -122,13 +122,13 @@ WHEN  I click on a high score,
 
 THEN  I am able to comment on that score.
 
-WHEN I click Invite a friend,
-
-THEN I am able to enter their email to send an invitation to play.
-
 WHEN I click play a game,
 
 THEN I am taken into the game and will be asked a series of questions.
+
+WHEN I complete a game,
+
+THEN my high score is saved to the database and an email with my score is sent.
 
 WHEN I click logout,
 
