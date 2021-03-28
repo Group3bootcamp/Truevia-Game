@@ -44,7 +44,7 @@ h1, h2 {
 
 .comment-header{
     /* background-color: gold; */
-    background-image: radial-gradient( rgb(255, 222, 47),rgb(255, 239, 146));
+    background-image: radial-gradient( rgb(251,251,200),rgb(251,251,170));
     border-color: black;
     border-width: 2px;
     border-style: dashed;
@@ -150,7 +150,7 @@ ol li::before {
     margin-bottom: 2rem;
     /* background: gold; */
     /* background: var(--primary); */
-    background-image: radial-gradient( rgb(255, 222, 47),rgb(255, 239, 146));
+    background-image: radial-gradient( rgb(251,251,200),rgb(251,251,170));
     /* background-size:  100%; */
   /* background-position: 50% 100%; */
   /* background-repeat: no-repeat; */
@@ -181,11 +181,13 @@ p{
     color: #fcd000;
     background: black;
 }
+
 .btn:focus
 {
     color: #fcd000;
     background: black;
 }
+
 .btn:active
 {
     color: #fcd000;
@@ -219,6 +221,7 @@ p{
     margin-top: 30px;
     padding: 10px;
 } 
+
 #trivia_category , #trivia_difficulty{
     max-width: 300px;
 }
