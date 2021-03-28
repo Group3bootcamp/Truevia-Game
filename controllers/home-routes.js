@@ -11,7 +11,8 @@ router.get('/', (req, res) => {
             'id',
             'score_amount',
             'created_at',
-            'category_id'
+            'category_id',
+            'difficulty'
     ],
     limit: 3,
     order: [['score_amount', 'DESC']], 
@@ -53,7 +54,8 @@ router.get('/game-end/:score', (req, res) => {
             'id',
             'score_amount',
             'created_at',
-            'category_id'
+            'category_id',
+            'difficulty'
     ],
     order: [['score_amount', 'DESC']], 
         include: [
@@ -98,7 +100,8 @@ router.get('/game-end/cat/:cat', (req, res) => {
             'id',
             'score_amount',
             'created_at',
-            'category_id'
+            'category_id',
+            'difficulty'
     ],
     order: [['score_amount', 'DESC']], 
         include: [
@@ -138,7 +141,8 @@ router.get('/game-end', (req, res) => {
             'id',
             'score_amount',
             'created_at',
-            'category_id'
+            'category_id',
+            'difficulty'
     ],
     order: [['score_amount', 'DESC']], 
         include: [
@@ -181,7 +185,8 @@ router.get('/score/:id', (req, res) => {
         'id',
         'score_amount',
         'created_at',
-        'category_id'
+        'category_id',
+        'difficulty'
     ],
         include: [
         {

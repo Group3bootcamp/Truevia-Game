@@ -38,6 +38,24 @@ header {
     font-weight: bold;
 }
 
+h1, h2 {
+    font-family: 'Quantico', sans-serif;
+}
+
+.comment-header{
+    /* background-color: gold; */
+    background-image: radial-gradient( rgb(251,251,200),rgb(251,251,170));
+    border-color: black;
+    border-width: 2px;
+    border-style: dashed;
+    border-radius: 20px;
+}
+
+.score-title
+{
+    font-family: 'Quantico', sans-serif; 
+}
+
 .header-buttons {
     display: flex;
     justify-content: flex-start;
@@ -111,7 +129,7 @@ ol li::before {
   font-size: 1.5rem;
   font-weight: bold;
   position: absolute;
-  --size: 32px;
+  --size: 50px;
   left: calc(-1 * var(--size) - 10px);
   line-height: var(--size);
   width: var(--size);
@@ -130,7 +148,12 @@ ol li::before {
     display: flex;
     border-radius: 4rem;
     margin-bottom: 2rem;
-    background: var(--primary);
+    /* background: gold; */
+    /* background: var(--primary); */
+    background-image: radial-gradient( rgb(251,251,200),rgb(251,251,170));
+    /* background-size:  100%; */
+  /* background-position: 50% 100%; */
+  /* background-repeat: no-repeat; */
     transform-origin: left;
     cursor: pointer;
     transition: transform 200ms ease-in-out;
@@ -158,11 +181,13 @@ p{
     color: #fcd000;
     background: black;
 }
+
 .btn:focus
 {
     color: #fcd000;
     background: black;
 }
+
 .btn:active
 {
     color: #fcd000;
@@ -174,11 +199,16 @@ p{
     color: black;
 }
 
-.btn-success , .btn-outline-success , .btn-primary , .input-group-prepend , .input-group-text
+.btn-success , .btn-outline-success , .btn-primary , .input-group-text
 {
     border-radius: .3rem;
     color: #fcd000;
     background: black;
+}
+
+.input-group-prepend
+{
+    width: 100%;
 }
 
 .btn-success:hover, .btn-outline-success:hover , .btn-primary:hover
@@ -191,6 +221,15 @@ p{
     margin-top: 30px;
     padding: 10px;
 } 
+
+#trivia_category , #trivia_difficulty{
+    max-width: 300px;
+}
+
+#signup-form, #login-form
+{
+    width: 21rem;
+}
 
 @media screen and (max-width: 700px)
 {
